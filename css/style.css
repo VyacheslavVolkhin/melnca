@@ -1227,6 +1227,7 @@ body.popup-open {
   right: 0;
   top: auto !important;
   z-index: 20;
+  pointer-events: none;
 }
 .bg-full-wrap {
   display: block;
