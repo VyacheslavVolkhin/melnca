@@ -199,7 +199,7 @@ h6:first-child,
 .title-center {
   text-align: center;
 }
-@media (max-width: 1599px) {
+@media (max-width: 1439px) {
   :root {
     font-size: 9.5px;
   }
@@ -232,7 +232,7 @@ h6:first-child,
     --mbsize: 20px;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   :root {
     --paddingContainer: 14rem;
   }
@@ -1240,7 +1240,7 @@ body.popup-open {
   transform: translateX(-50%);
   overflow: hidden;
 }
-@media (max-width: 1599px) {
+@media (max-width: 1439px) {
   .main-slider-box .inner-wrap {
     padding-left: 0;
     padding-right: 0;
@@ -1738,7 +1738,7 @@ select.form-input:required:invalid {
     background-size: 24px auto;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   .btn-action-page {
     display: block;
   }
