@@ -712,6 +712,11 @@ body.popup-open {
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
   }
+  .header:before {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
   .header .inner-wrap {
     padding-top: 15px;
     padding-bottom: 15px;

@@ -418,13 +418,18 @@ body.popup-open {
 		}
 	}
 	.popup-box {
-		
+
 	}
 }
 @media (min-width: 1024px) {
 	.header {
 		background: var(--clr-base-white);
 		backdrop-filter: none;
+		&:before {
+			border-top: none;
+			border-left: none;
+			border-right: none;
+		}
 		.inner-wrap {
 			padding-top: 15px;
 			padding-bottom: 15px;
