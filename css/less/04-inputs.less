@@ -1,0 +1,503 @@
+/* ----------------------------------- *\
+			inputs elements styles
+\* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {color: var(--clr-base-light);}
+[placeholder]:-moz-placeholder {color: var(--clr-base-light);}
+[placeholder]::-moz-placeholder {color: var(--clr-base-light);}
+[placeholder]:-ms-input-placeholder {color: var(--clr-base-light);}
+.form-input[placeholder] {
+    text-overflow: ellipsis;
+}
+.form-input {
+    text-overflow: ellipsis;
+	height: 38px;
+	border: 1px solid var(--clr-bg-black);
+	background-color: transparent;
+	padding: 0 19px;
+	font-size: 14px;
+	color: var(--clr-base);
+}
+textarea.form-input {
+
+}
+select.form-input {
+    display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 30px;
+    background-image: url(../img/icons/arrow-select.svg);
+    background-position: right 20px center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none!important;
+    line-height: 1em;
+    text-indent: 0.01px;
+    //text-overflow: '';
+    outline: none;
+	cursor: pointer;
+    &.form-input-clear {
+        height: auto;
+        border: none;
+        min-height: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: inherit;
+        padding: 0 16px 0 0;
+        color: inherit;
+        font-weight: bold;
+        background-image: url(../img/icons/arrow-select.png);
+        background-size: 8px auto;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+//   <select class="form-input form-input-line" required>
+//       <option value="" disabled selected hidden>Выбрать</option>
+//       <option>Пункт списка</option>
+//   </select>
+select.form-input:required:invalid {
+    color: #ADADAD;
+}
+.btn {
+	height: 38px;
+	padding: 0 30px;
+	background: var(--clr-att);
+	border: 1px solid var(--clr-att);
+	font-size: 14px;
+	text-transform: uppercase;
+	color: var(--clr-base-white);
+	&:hover {
+		background-color: var(--clr-base);
+		border-color: var(--clr-base);
+		color: var(--clr-base-white);
+	}
+	&.button-dark {
+		background-color: var(--clr-base);
+		border-color: var(--clr-base);
+		color: var(--clr-base-white);
+		&:hover {
+			background-color: var(--clr-att);
+			border-color: var(--clr-att);
+			color: var(--clr-base-white);
+		}
+		.button-ico {
+			filter: brightness(0) invert(1);
+		}
+	}
+	&.button-link {
+		width: auto;
+		height: auto;
+		line-height: 24px;
+		color: inherit;
+		white-space: normal;
+		align-items: center;
+		padding: 0;
+		min-width: 0;
+		background: none;
+		border: none;
+		border-radius: 0;
+		font-weight: inherit;
+		font-size: inherit;
+		&:hover {
+			border: none;
+			background: none;
+			color: var(--clr-att);
+		}
+		.button-ico {
+			filter: none
+		}
+	}
+    &.button-border {
+        &:not(:hover) {
+            background-color: transparent;
+            color: #231f20;
+        }
+        &:hover, &.active {
+            background-color: var(--clr-att);
+            border-color: var(--clr-att);
+            .button-ico {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    .button-ico {
+        width: var(--icoSize);
+        height: var(--icoSize);
+        margin: 0 10px;
+        transition: all ease 0.2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .button-title {
+        &[data-title] {
+            &:before {
+                content: attr(data-title);
+            }
+        }
+        &[data-show] {
+            &:before {
+                content: attr(data-show);
+            }
+        }
+    }
+    &.active {
+        .button-title {
+            &[data-title-active] {
+                &:before {
+                    content: attr(data-title-active);
+                }
+            }
+        }
+        .button-title {
+            &[data-hide] {
+                &:before {
+                    content: attr(data-hide);
+                }
+            }
+        }
+    }
+	.button-active-add, .button-active-toggle {
+		.button-title {
+			&:before {
+				content: attr(data-title);
+			}
+		}
+		.button-ico-active {
+			display: none;
+		}
+		&.active {
+			.button-title {
+				&:before {
+					content: attr(data-title-active);
+				}
+			}
+			&:has(.button-ico-active) {
+				.button-ico {
+					display: none;
+				}
+				.button-ico-active {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.btn-phone-page {
+	display: none;
+	position: fixed;
+	bottom: 4.8rem;right: 4.8rem;
+	z-index: 20;
+	width: 6.4rem;
+	height: 6.4rem;
+	min-width: 0;
+	padding: 0;
+	border-radius: 50%;
+	box-shadow: 0px 20px 30px 0px rgba(66, 45, 28, 0.40);
+	justify-content: center;
+	align-items: center;
+	.button-ico {
+		margin: 0 auto;
+	}
+	&.btn {
+		min-width: 0;
+		padding: 0;
+	}
+}
+.btn-action-page {
+	display: none;
+	position: relative;
+	overflow: hidden;
+	width: 200px;height: 200px;
+	border-radius: 50%;
+	border: 1px solid var(--clr-att);
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--clr-base);
+	text-align: center;
+	text-transform: uppercase;
+	transition: all ease 0.2s;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;left: 50%;
+	margin-top: -100px;
+	margin-left: calc(-50vw - 100px);
+	rotate: -90deg;
+
+	z-index: 20;
+	&:before {
+		content: "";
+		display: block;
+		width: 32px;
+		height: 26px;
+		position: absolute;
+		background: url(../img/icons/arrow-page.svg) center no-repeat;
+		background-size: 100% auto;
+		top: 50%;left: 50%;
+		margin-left: -16px;
+		margin-top: 10px;
+		rotate: -90deg;
+		transition: all ease 0.2s;
+
+	}
+	&:hover {
+		color: var(--clr-base-white);
+		background-color: var(--clr-att);
+		border-color: var(--clr-att);
+		&:before {
+			filter: brightness(0) invert(1);
+		}
+	}
+	.button-title {
+		position: absolute;
+		top: 136px;
+		left: 0;
+		right: 0;
+		padding: 0 10px;
+	}
+	&.button-next {
+		left: auto;
+		right: 50%;
+		margin-left: 0;
+		margin-right: calc(-50vw - 100px);
+		rotate: 90deg;
+		.button-title {
+			rotate: 180deg;
+		}
+	}
+}
+.btn-action-ico {
+    min-width: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    flex-shrink: 0;
+    &:not(.btn) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn {
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+    }
+	&.button-dark {
+		&:before {
+			filter: brightness(0) invert(1);
+		}
+	}
+    &:before, &:after, [class*="icon-"], img, svg {
+        display: block;
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        transition: all ease 0.2s;
+    }
+    img, svg {
+        max-width: var(--icoSize);
+        max-height: var(--icoSize);
+    }
+    &:before, &:after {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: var(--icoSize) auto;
+    }
+    &:hover {
+        text-decoration: none;
+        &:not(.btn) {
+            background: none;
+            box-shadow: none;
+        }
+    }
+	&.ico-phone {
+		&:before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			background: url(../img/icons/phone.svg) center no-repeat;
+			background-size: 100% auto;
+		}
+	}
+    &.ico-arrow {
+        z-index: 20;
+        cursor: pointer;
+        &:before {
+            background-image: url(../img/icons/arrow-slider.png);
+        }
+        &:hover {
+        }
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+    }
+    &.ico-arrow-prev {
+        &:before {
+            .t-rotate(180deg);
+        }
+    }
+    &.ico-menu {
+		width: 100%;
+		&:before {
+			background-image: url(../img/icons/menu.svg);
+			background-size: 100% auto;
+		}
+    }
+    &.ico-close {
+		&:before {
+			background-image: url(../img/icons/close.svg);
+			background-size: 20px auto;
+		}
+    }
+    &.button-soc {
+		border-radius: 50%;
+        img, svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+	&.button-active-close, &.button-active-toggle {
+		&:after {
+			opacity: 0;
+		}
+		&.active {
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	&.button-active-close {
+		&:after {
+			background-image: url(../img/icons/close.svg);
+		}
+	}
+}
+.btn-menu-main {
+	display: block;
+	position: relative;
+	line-height: 1.6;
+	color: var(--clr-base);
+	padding: 2px 0 2px 44px;
+	transition: all ease 0.2s;
+	&.active {
+		color: var(--clr-att);
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;left: 0;
+		margin-top: -1px;
+		width: 30px;height: 2px;
+		background: var(--clr-att);
+		transition: all ease 0.2s;
+	}
+	&:hover {
+		color: var(--clr-att);
+		padding-left: 74px;
+		&:before {
+			width: 60px;
+		}
+	}
+}
+.btn-action-icon {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    color: inherit;
+    &.button-att {
+        color: var(--clr-att);
+        .button-ico {
+            filter: none;
+        }
+    }
+    &:hover {
+        color: var(--clr-att);
+        .button-ico {
+            filter: none;
+        }
+    }
+    .button-ico {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        filter: brightness(0) grayscale(1);
+        &+.button-title {
+            padding-left: 10px;
+        }
+    }
+    .button-title {
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+	.form-input {
+		background-color: var(--clr-base-white);
+		height: 64px;
+		font-size: var(--fsize);
+	}
+	.btn {
+		height: 64px;
+		padding: 0 4.8rem;
+		font-size: var(--fsizeTitle);
+	}
+	.btn-menu-main {
+		padding-left: 7rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		&:before {
+			width: 4rem;
+		}
+		&:hover {
+			padding-left: 11rem;
+			&:before {
+				width: 8rem;
+			}
+		}
+	}
+	.btn-action-ico {
+		&.ico-close {
+			&:before {
+				background-size: 24px auto;
+			}
+		}
+	}
+}
+@media (min-width: 1600px) {
+	.btn-action-page {
+		display: block;
+	}
+	.btn-phone-page {
+		display: flex;
+	}
+}
