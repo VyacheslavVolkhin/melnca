@@ -777,7 +777,6 @@ body.popup-open {
     left: auto;
     right: 0;
     width: 80px;
-    opacity: 0.2;
     filter: var(--filterAttToBase);
   }
   .popup-menu-wrap .btn-action-ico.ico-menu:after {
