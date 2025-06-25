@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+	//button scroll 
+	document.querySelectorAll('.js-anchor').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	});
+	
 
 	//js popup wrap
 	const togglePopupButtons = document.querySelectorAll('.js-btn-popup-toggle')
