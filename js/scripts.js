@@ -190,4 +190,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		swiperSliderMain.on('slideChange', updateSlideCount);
 	}
 
+
+	//slider inner
+	const swiperSliderInner = new Swiper('.slider-inner .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: false,
+		speed: 400,
+		pagination: {
+			el: '.slider-inner-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 250000,
+			disableOnInteraction: false,
+		},
+		navigation: false,
+	});
+
 })
