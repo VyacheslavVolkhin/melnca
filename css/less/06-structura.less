@@ -389,6 +389,15 @@ body.popup-open {
 		}
 	}
 }
+.wrap-scroll {
+	overflow: auto;
+	height: 100vh;
+    scroll-snap-type: y mandatory;
+	.wrap-inner, .section-main-box {
+		scroll-snap-align: start;
+		height: 100vh;
+	}
+}
 .logo {
     display: block;
     position: relative;

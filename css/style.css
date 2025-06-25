@@ -695,6 +695,17 @@ body.popup-open {
   width: 0;
   height: 0;
 }
+.wrap-scroll {
+  overflow: auto;
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+.wrap-scroll .wrap-inner,
+.wrap-scroll .section-main-box {
+  scroll-snap-align: start;
+  height: 100vh;
+}
 .logo {
   display: block;
   position: relative;
