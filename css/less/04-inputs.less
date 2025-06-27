@@ -81,6 +81,16 @@ select.form-input:required:invalid {
 		border-color: var(--clr-base);
 		color: var(--clr-base-white);
 	}
+	&.button-light {
+		background-color: var(--clr-base-white);
+		border-color: var(--clr-base-white);
+		color: var(--clr-att);
+		&:hover {
+			background-color: var(--clr-base-white);
+			border-color: var(--clr-base-white);
+			color: var(--clr-att-hover);
+		}
+	}
 	&.button-dark {
 		background-color: var(--clr-base);
 		border-color: var(--clr-base);
@@ -459,6 +469,14 @@ select.form-input:required:invalid {
     .button-title {
         display: block;
     }
+}
+@media (max-width: 767px) {
+	.btn-phone-page {
+		width: 30px;height: 30px;
+		.button-ico {
+			width: 16px;height: 16px;
+		}
+	}
 }
 @media (min-width: 1024px) {
 	.form-input {

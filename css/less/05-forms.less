@@ -13,7 +13,7 @@
     display: block;
     width: 100%;
 }
-.frm-select {
+.frm-select, .frm-select-button {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -48,6 +48,44 @@
 		}
 	}
 }
+.frm-select-button {
+	line-height: 1;
+	flex-shrink: 0;
+	input {
+		&:checked {
+			&~label {
+				background-color: var(--clr-att);
+				border-color: var(--clr-att);
+				color: var(--clr-base-white);
+			}
+		}
+	}
+	label {
+		display: block;
+		justify-content: center;
+		align-items: center;
+		display: block;
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		height: 30px;
+		border-radius: 15px;
+		padding: 0 15px;
+		min-width: 85px;
+		text-align: center;
+		line-height: 28px;
+		border: 1px solid var(--clr-att);
+		font-size: 12px;
+		color: var(--clr-base);
+		&:hover {
+			background-color: var(--clr-att);
+			border-color: var(--clr-att);
+			color: var(--clr-base-white);
+		}
+	}
+}
 
 
 .frm-select {
@@ -75,6 +113,18 @@
 		color: inherit;
 		&:hover {
 			color: var(--clr-att);
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.frm-select-button {
+		label {
+			height: 4.8rem;
+			border-radius: 2.4rem;
+			padding: 0 3rem;
+			font-size: 2.4rem;
+			line-height: 4.6rem;;
+			min-width: 22rem;
 		}
 	}
 }

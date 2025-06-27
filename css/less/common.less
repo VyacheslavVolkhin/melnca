@@ -798,6 +798,17 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 		align-items: flex-end;
 		justify-content: center;
 		padding: 0;
+		&.pagination-dark {
+			.swiper-pagination-bullet {
+				background: var(--clr-base);
+				&:hover {
+					background-color: var(--clr-att);
+				}
+				&.swiper-pagination-bullet-active {
+					background: var(--clr-att);
+				}
+			}
+		}
 		.swiper-pagination-bullet {
 			width: 2px;height: 16px;
 			background: var(--clr-base-white);

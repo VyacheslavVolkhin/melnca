@@ -1,6 +1,46 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-info {
+	display: block;
+	position: relative;
+	min-height: 100%;
+	padding: 10px;
+	background: #F2F3F5;
+	text-align: center;
+	font-size: 10px;
+	font-weight: 500;
+	color: var(--clr-base);
+	line-height: normal;
+	font-variant-numeric: lining-nums proportional-nums;
+	.tile-ico {
+		display: block;
+		margin: 0 auto;
+		width: 40px;height: 40px;
+	}
+	.tile-title {
+		display: block;
+		margin: 10px 0 0 0;
+	}
+}
+.item-tile-ico {
+	display: block;
+	position: relative;
+	font-size: 10px;
+	font-weight: 500;
+	color: var(--clr-base);
+	text-align: center;
+	line-height: normal;
+	min-height: 100%;
+	.tile-ico {
+		width: 32px;height: 32px;
+		margin: 0 auto;
+	}
+	.tile-title {
+		display: block;
+		margin-top: 13px;
+	}
+}
 :is([class^="item-tile"]) {
     &:hover {
         .elm-photo, .tile-photo {
@@ -17,6 +57,18 @@
     text-decoration: none;
     line-height: 1;
 	flex-shrink: 0;
+	&.photo-hover {
+		transition: all ease 0.6s;
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0px 200px 200px -90px rgba(0, 0, 0, 0.50);
+		}
+	}
+	&:hover {
+		.photo-action-wrap {
+			opacity: 1;
+		}
+	}
     &.photo-zoom {
 		&:after {
 			content: "";
@@ -155,4 +207,26 @@
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
+}
+@media (min-width: 768px) {
+	.item-tile-info {
+		padding: 4rem;
+		font-size: 2rem;
+		.tile-ico {
+			width: 8rem;height: 8rem;
+		}
+		.tile-title {
+			margin-top: 2rem;
+		}
+	}
+	.item-tile-ico {
+		font-size: 1em;
+		.tile-ico {
+			width: 8rem;
+			height: 8rem;
+		}
+		.tile-title {
+			margin-top: 2rem;
+		}
+	}
 }
