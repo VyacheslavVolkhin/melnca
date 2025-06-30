@@ -368,6 +368,14 @@ select.form-input:required:invalid {
 			opacity: 0.5;
 		}
     }
+	&.ico-arrow-main {
+		width: 18rem;height: 30px;
+		cursor: pointer;
+		&:before {
+			background-image: url(../img/icons/arrow-main.svg);
+			background-size: 100% auto;
+		}
+	}
     &.ico-arrow-prev {
         &:before {
             .t-rotate(180deg);
@@ -432,7 +440,7 @@ select.form-input:required:invalid {
 		background: var(--clr-att);
 		transition: all ease 0.2s;
 	}
-	&:hover {
+	&[href]:hover {
 		color: var(--clr-att);
 		padding-left: 74px;
 		&:before {
@@ -477,6 +485,15 @@ select.form-input:required:invalid {
 			width: 16px;height: 16px;
 		}
 	}
+	.btn-action-ico {
+		&.ico-arrow-main {
+			width: 52px;
+			height: 30px;
+			&:before {
+				background-image: url(../img/icons/arrow-main-m.svg);
+			}
+		}
+	}
 }
 @media (min-width: 1024px) {
 	.form-input {
@@ -496,7 +513,7 @@ select.form-input:required:invalid {
 		&:before {
 			width: 4rem;
 		}
-		&:hover {
+		&[href]:hover {
 			padding-left: 11rem;
 			&:before {
 				width: 8rem;

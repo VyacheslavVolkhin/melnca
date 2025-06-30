@@ -1,0 +1,32 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.42871" y="2.80078" width="30.7252" height="23.6094" stroke="#BC9C65" stroke-width="2"/>
+<rect x="1.42871" y="25.4961" width="69.4641" height="23.6094" stroke="#BC9C65" stroke-width="2"/>
+<rect x="1.42871" y="48.1934" width="30.7252" height="23.6094" stroke="#BC9C65" stroke-width="2"/>
+<rect x="1.42871" y="70.8906" width="69.4641" height="23.6094" stroke="#BC9C65" stroke-width="2"/>
+<rect x="1.42871" y="93.5859" width="30.7252" height="23.6094" stroke="#BC9C65" stroke-width="2"/>
+<rect width="38.7389" height="23.6094" transform="matrix(-1 0 0 1 70.8926 2.80078)" stroke="#BC9C65" stroke-width="2"/>
+<rect width="38.7389" height="23.6094" transform="matrix(-1 0 0 1 70.8926 48.1934)" stroke="#BC9C65" stroke-width="2"/>
+<rect width="38.7389" height="23.6094" transform="matrix(-1 0 0 1 70.8926 93.5859)" stroke="#BC9C65" stroke-width="2"/>
+<path d="M25.1572 116.46L67.5524 3.28711H102.403L59.6482 116.46H25.1572Z" fill="white" stroke="#BC9C65" stroke-width="2"/>
+<path d="M118.078 116.461L118.079 3.28711L102.403 3.28798L59.6484 116.461H118.078Z" fill="white" stroke="#BC9C65" stroke-width="2"/>
+<mask id="mask0_4714_17820" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="25" y="3" width="78" height="114">
+<path d="M25.1572 116.46L67.5524 3.28711H102.403L59.6482 116.46H25.1572Z" fill="black"/>
+</mask>
+<g mask="url(#mask0_4714_17820)">
+<rect x="72.8643" y="14.6055" width="31.8039" height="3.85186" fill="#BC9C65"/>
+<rect x="67.5244" y="26.4102" width="33.081" height="3.85186" fill="#BC9C65"/>
+<rect x="63.1143" y="38.9453" width="37.4915" height="3.85186" fill="#BC9C65"/>
+<rect x="58.7031" y="51.4805" width="37.4915" height="3.85186" fill="#BC9C65"/>
+<rect x="54.293" y="64.0156" width="37.4915" height="3.85186" fill="#BC9C65"/>
+<rect x="49.8828" y="76.5508" width="37.4915" height="3.85186" fill="#BC9C65"/>
+<rect x="45.4717" y="89.0859" width="37.4915" height="3.85186" fill="#BC9C65"/>
+<rect x="41.0615" y="101.621" width="37.4915" height="3.85186" fill="#BC9C65"/>
+</g>
+<circle cx="105.986" cy="23.6382" r="3.58347" fill="#BC9C65"/>
+<circle cx="105.986" cy="49.8237" r="3.58347" fill="#BC9C65"/>
+<circle cx="105.986" cy="76.0073" r="3.58347" fill="#BC9C65"/>
+<circle cx="87.6479" cy="73.7612" r="3.58347" fill="#BC9C65"/>
+<circle cx="105.986" cy="102.21" r="3.58347" fill="#BC9C65"/>
+<circle cx="87.6479" cy="99.9643" r="3.58347" fill="#BC9C65"/>
+<rect x="1.42871" y="2.80078" width="117.143" height="114.396" stroke="#BC9C65" stroke-width="2"/>
+</svg>
