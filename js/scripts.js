@@ -14,6 +14,42 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		});
 	});
+
+
+	//btn tgl and add
+	let tglButtons = document.querySelectorAll('.js-btn-tgl')
+	let addButtons = document.querySelectorAll('.js-btn-add')
+	for (i = 0;i < tglButtons.length;i++) {
+		tglButtons[i].addEventListener('click', function(e) {
+			this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
+			e.preventDefault()
+			return false
+		})
+	}
+	for (i = 0;i < addButtons.length;i++) {
+		addButtons[i].addEventListener('click', function(e) {
+			if (!this.classList.contains('active')) {
+				this.classList.add('active');
+				e.preventDefault()
+				return false
+			}
+		})
+	}
+	let buttonsTglOne = document.querySelectorAll('.js-btn-tgl-one');
+	buttonsTglOne.forEach(function(button) {
+		button.addEventListener('click', function(e) {
+			e.preventDefault();
+			let row = this.closest('.row');
+			row.querySelectorAll('.js-btn-tgl-one').forEach(function(btn) {
+				btn.classList.remove('active');
+			});
+			row.querySelectorAll('.js-btn-tgl-one').forEach(function(btn) {
+				btn.classList.remove('active');
+			});
+			this.classList.add('active');
+			return false;
+		});
+	});
 	
 
 	//js popup wrap
@@ -220,37 +256,50 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
-	//slider photos
-	const swiperSliderPhotos = new Swiper('.slider-photos .swiper', {
-		loop: false,
-		slidesPerView: 1,
-		spaceBetween: 0,
-		autoHeight: true,
-		speed: 400,
-		pagination: false,
-		autoplay: false,
-		navigation: false,
-		breakpoints: {
-			640: {
-				slidesPerView: 2,
+	// slider photos
+	const slidersPhotos = document.querySelectorAll('.section-tiles');
+
+	slidersPhotos.forEach(sliderOne => {
+		const swiperSliderPhotos = new Swiper(sliderOne.querySelector('.swiper'), {
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 400,
+			pagination: false,
+			autoplay: false,
+			navigation: {
+				nextEl: '.btn-action-ico.ico-arrow-main.ico-arrow-next.button-slider-photos-next',
+				prevEl: '.btn-action-ico.ico-arrow-main.ico-arrow-prev.button-slider-photos-prev',
 			},
-			1024: {
-				slidesPerView: 3,
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 3,
+				},
 			},
-		},
-	
+		});
+
+		function updateSlideCountPhotos() {
+			const currentIndex = swiperSliderPhotos.realIndex + 1;
+			const totalSlides = swiperSliderPhotos.slides.length;
+			const formattedCurrent = String(currentIndex).padStart(2, '0');
+			const formattedTotal = String(totalSlides).padStart(2, '0');
+			const countElement = sliderOne.querySelector('.photos-slider-count');
+			if (countElement) {
+				countElement.textContent = `${formattedCurrent} | ${formattedTotal}`;
+			}
+		}
+		const countElement = sliderOne.querySelector('.photos-slider-count');
+		if (countElement) {
+			console.log('test')
+			updateSlideCountPhotos();
+			swiperSliderPhotos.on('slideChange', updateSlideCountPhotos);
+		}
 	});
-	function updateSlideCountPhoots() {
-		const currentIndex = swiperSliderPhotos.realIndex + 1;
-		const totalSlides = swiperSliderPhotos.slides.length;
-		const formattedCurrent = String(currentIndex).padStart(2, '0');
-		const formattedTotal = String(totalSlides).padStart(2, '0');
-		document.querySelector('.photos-slider-count').textContent = `${formattedCurrent} | ${formattedTotal}`;
-	}
-	if (swiperSliderPhotos && document.querySelector('.photos-slider-count')) {
-		updateSlideCountPhoots();
-		swiperSliderPhotos.on('slideChange', updateSlideCountPhoots);
-	}
+
 
 
 	//slider gallery

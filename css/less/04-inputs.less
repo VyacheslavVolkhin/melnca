@@ -26,7 +26,8 @@ select.form-input {
     width: 100%;
     padding-right: 30px;
     background-image: url(../img/icons/arrow-select.svg);
-    background-position: right 20px center;
+    background-position: right 10px center;
+	background-size: 14px auto;
     background-color: #fff;
     background-repeat: no-repeat;
     -moz-appearance: none;
@@ -38,6 +39,14 @@ select.form-input {
     //text-overflow: '';
     outline: none;
 	cursor: pointer;
+	position: relative;
+	z-index: 5;
+	&.inp-main {
+		height: 28px;
+		padding-left: 8px;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
     &.form-input-clear {
         height: auto;
         border: none;
@@ -76,6 +85,40 @@ select.form-input:required:invalid {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: var(--clr-base-white);
+	&.button-more {
+		padding: 0 8rem 0 2rem;
+		font-size: 2.4rem;
+		color: var(--clr-att);
+		text-transform: uppercase;
+		font-weight: 400;
+		border: none;
+		background: none;
+		border-radius: 0;
+		&:hover {
+			color: var(--clr-base);
+			background: none;
+			&:before {
+				filter: brightness(0) grayscale(1);;
+			}
+		}
+		&.active {
+			&:before {
+				rotate: 180deg;
+			}
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 4rem;
+			height: 3rem;
+			position: absolute;
+			background: url(../img/icons/arrow-more.svg) center no-repeat;
+			transition: all ease 0.2s;
+			background-size: 100% auto;
+			top: 50%;right: 2rem;
+			margin-top: -1.5rem;
+		}
+	}
 	&:hover {
 		background-color: var(--clr-base);
 		border-color: var(--clr-base);
@@ -496,6 +539,16 @@ select.form-input:required:invalid {
 	}
 }
 @media (min-width: 1024px) {
+	select.form-input {
+		background-size: 3rem auto;
+		background-position: right 20px center;
+		padding-right: 6rem;
+		&.inp-main {
+			height: 6.6rem;
+			padding-left: 2rem;
+			font-size: 2.4rem;
+		}
+	}
 	.form-input {
 		background-color: var(--clr-base-white);
 		height: 64px;
