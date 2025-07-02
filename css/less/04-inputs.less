@@ -289,7 +289,6 @@ select.form-input:required:invalid {
 	margin-top: -100px;
 	margin-left: calc(-50vw - 100px);
 	rotate: -90deg;
-
 	z-index: 20;
 	&:before {
 		content: "";
@@ -307,12 +306,9 @@ select.form-input:required:invalid {
 
 	}
 	&:hover {
-		color: var(--clr-base-white);
-		background-color: var(--clr-att);
+		color: var(--clr-att);
 		border-color: var(--clr-att);
-		&:before {
-			filter: brightness(0) invert(1);
-		}
+		transform: scale(1.1);
 	}
 	.button-title {
 		position: absolute;
@@ -430,11 +426,42 @@ select.form-input:required:invalid {
 			background-image: url(../img/icons/menu.svg);
 			background-size: 100% auto;
 		}
+		&:before {
+			display: none;
+		}
+		img, svg {
+			max-width: 100%;
+			max-height: 100%;
+			display: block;
+			line-height: 1;
+		}
+		&:hover {
+			.burger-button__line {
+				fill: var(--clr-att);
+				&:first-child {
+					width: 80px;
+				}
+				&:last-child {
+					width: 20px;
+				}
+			}
+		}
+		.burger-button__line {
+			transition: all ease 0.2s;
+		}
     }
     &.ico-close {
 		&:before {
 			background-image: url(../img/icons/close.svg);
 			background-size: 20px auto;
+		}
+		&:hover {
+			&:after {
+				color: var(--clr-base);
+			}
+			&:before {
+				filter: var(--filterAttToBase);
+			}
 		}
     }
     &.button-soc {
