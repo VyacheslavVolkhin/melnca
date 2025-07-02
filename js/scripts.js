@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+
+	//select style
+	document.querySelectorAll('select').forEach(function(select) {
+		new Choices(select);
+	});
+
 	//button scroll 
 	document.querySelectorAll('.js-anchor').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {

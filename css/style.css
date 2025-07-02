@@ -4693,7 +4693,148 @@ select.form-input:required:invalid {
 .frm-select a:hover {
   color: var(--clr-att);
 }
+body .choices {
+  font-size: 11px;
+  line-height: 20px;
+  text-transform: uppercase;
+  z-index: 100;
+  /* button */
+  /* button padding */
+  /* button arrow */
+  /* button reset */
+  /* dropdown */
+  /* dropdown search */
+  /* dropdown reset */
+}
+body .choices .choices__inner {
+  background: #fff;
+  border-color: var(--clr-att);
+  min-height: 28px;
+  font-size: 1em;
+}
+body .choices .choices__inner,
+body .choices.choices[data-type*=select-one] .choices__inner {
+  padding: 4px 30px 4px 8px;
+}
+body .choices.choices[data-type*=select-one]::after {
+  content: "";
+  display: block;
+  border: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url(../img/icons/arrow-select.svg) center no-repeat;
+  background-size: 12px auto;
+  top: 50%;
+  right: 6px;
+  margin-top: -12px;
+}
+body .choices .choices__list--single {
+  padding: 0;
+}
+body .choices .choices__list--dropdown {
+  background: var(--clr-bg-light);
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 20px;
+  padding: 8px;
+  box-shadow: 0px 84.848px 84.848px -38.182px rgba(0, 0, 0, 0.5);
+}
+body .choices .choices__list--dropdown .choices__list {
+  max-height: 180px;
+  padding-right: 10px;
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+  background-color: var(--clr-att);
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-att);
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-button:vertical:start:decrement {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-button:vertical:end:increment {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar-button:horizontal:end:increment {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+}
+body .choices .choices__list--dropdown .choices__item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
+body .choices .choices__list--dropdown .choices__item:last-child {
+  border-bottom: none;
+}
+body .choices.choices[data-type*=select-one] .choices__input {
+  display: none;
+}
+body .choices .choices__list--dropdown .choices__item--selectable[data-select-text],
+body .choices .choices__list[aria-expanded] .choices__item--selectable[data-select-text] {
+  padding-right: 0;
+}
+body .choices .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
+body .choices .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+  display: none;
+}
 @media (min-width: 1024px) {
+  body .choices {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    /* dropdown */
+    /* dropdown search */
+  }
+  body .choices .choices__inner {
+    min-height: 6.6rem;
+  }
+  body .choices .choices__inner,
+  body .choices.choices[data-type*=select-one] .choices__inner {
+    padding: 1.7rem 4rem 1.7rem 1.9rem;
+  }
+  body .choices.choices[data-type*=select-one]::after {
+    background-size: 24px auto;
+    right: 2rem;
+  }
+  body .choices .choices__list--single {
+    padding: 0;
+  }
+  body .choices .choices__list--dropdown {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    padding: 12px 1.9rem;
+  }
+  body .choices .choices__list--dropdown .choices__list {
+    max-height: 320px;
+    padding-right: 20px;
+  }
+  body .choices .choices__list--dropdown .choices__list::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+  body .choices .choices__list--dropdown .choices__item {
+    padding: 15px 0;
+  }
+  body .choices.choices[data-type*=select-one] .choices__input {
+    display: none;
+  }
   .frm-select-button label {
     height: 4.8rem;
     border-radius: 2.4rem;
