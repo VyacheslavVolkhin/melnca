@@ -2204,6 +2204,7 @@ body.popup-open {
       flex-direction: column;
   -ms-flex: 1;
       flex: 1;
+  pointer-events: none;
 }
 .section-info-sliders .slider-container-wrap {
   min-height: 250px;
