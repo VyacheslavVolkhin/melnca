@@ -760,6 +760,7 @@ body.popup-open {
   height: 100vh;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 .wrap-scroll .wrap-inner,
 .wrap-scroll .section-main-box {
