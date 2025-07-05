@@ -4,7 +4,9 @@
     <!-- /build -->
     <body>
         <!-- wrap -->
-        <div class="wrap wrap-main wrap-scroll">
+        <div class="wrap wrap-main wrap-scroll" id="wrap-scroll">
+
+
 
 			<!--splash-screen-box-->
 			<div class="splash-screen-box">
@@ -18,9 +20,8 @@
 			</div>
 			<!--/splash-screen-box-->
 
-			
 
-			<div class="wrap-inner">
+			<div class="wrap-inner" id="wrap-inner">
 
 				<!-- build:section header -->
 				<!-- /build -->
@@ -34,42 +35,42 @@
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main01.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main01.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main02.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main02.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main03.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main03.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main04.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main04.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main05.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main05.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="sl-bg-wrap">
-											<img src="./img/main06.jpg" alt="" class="img-bg-cover">
+											<img src="./img/main06.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
@@ -97,12 +98,12 @@
 		   </div>
 
 		    <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-about" id="section01">
-				<div class="bg-inner-wrap">
+		   <div class="section-main-box cnt-section section-about" data-scroll="0" id="section01">
+				<div class="bg-inner-wrap js-parallax">
 					<img src="./img/about.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
-					<div class="title-inner-wrap">
+					<div class="title-inner-wrap js-parallax">
 						<div class="section-title">о проекте</div>
 						<p>Жилой комплекс «Мельница» в историческом центре Ставрополя изменяет представление об эстетике жизни в городе и задает новые стандарты</p>
 					</div>
@@ -111,138 +112,158 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-info inner-slider-box">
-				<div class="slider-inner-wrap slider-inner">
-					<div class="slider-wrap swiper">
-						<div class="slider swiper-wrapper">
-							<!--sl-wrap-->
-							<div class="sl-wrap swiper-slide">
-								<div class="inner-wrap">
-									<div class="box-inner-wrap">
-										<div class="info-inner-wrap">
-											<div class="info-inner-content">
-												<div class="title-inner-wrap title-small-text text-att">
-													<div class="section-title">Синергия роскоши, стиля и истории</div>
-													<p>Жилой комплекс состоит из домов класса «комфорт», а так же памятника архитектуры — мельницы Баранова-Гулиева, которая органично вписана в пространство нового проекта</p>
-												</div>
-												<div class="text-inner-wrap">
-													<ul class="menu">
-														<li><a href="" class="btn-menu-main">Продуманные планировочные решения</a></li>
-														<li><a href="" class="btn-menu-main">Квартиры с мастер-спальней</a></li>
-														<li><a href="" class="btn-menu-main">Уникальные квартиры с собственной террасой</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="photo-inner-wrap">
-											<img src="./img/info01.jpg" alt="" class="img-bg-cover">
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/sl-wrap-->
-							<!--sl-wrap-->
-							<div class="sl-wrap swiper-slide">
-								<div class="inner-wrap">
-									<div class="box-inner-wrap">
-										<div class="info-inner-wrap">
-											<div class="info-inner-content">
-												<div class="title-inner-wrap">
-													<div class="section-title">Жизнь в центре событий</div>
-													<p>Знаковый проект для ценителей комфортной городской среды</p>
-												</div>
-												<div class="text-inner-wrap">
-													<ul class="menu">
-														<li><a href="" class="btn-menu-main">Авторская архитектура</a></li>
-														<li><a href="" class="btn-menu-main">Видовые квартиры</a></li>
-														<li><a href="" class="btn-menu-main">Двор как парк</a></li>
-													</ul>
+		   <div class="section-main-box cnt-section section-info-sliders" data-scroll="0" id="section02">
+				<div class="inner-wrap">
+					<div class="box-inner-wrap">
+						<!-- slider info -->
+						<div class="slider-container-wrap">
+							<div class="slider-inner-wrap slider-inner-info">
+								<div class="slider-wrap swiper">
+									<div class="slider swiper-wrapper">
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="info-inner-wrap">
+												<div class="info-inner-content">
+													<div class="title-inner-wrap title-small-text text-att">
+														<div class="section-title">Синергия роскоши, стиля и истории</div>
+														<p>Жилой комплекс состоит из домов класса «комфорт», а так же памятника архитектуры — мельницы Баранова-Гулиева, которая органично вписана в пространство нового проекта</p>
+													</div>
+													<div class="text-inner-wrap">
+														<ul class="menu">
+															<li><a href="" class="btn-menu-main">Продуманные планировочные решения</a></li>
+															<li><a href="" class="btn-menu-main">Квартиры с мастер-спальней</a></li>
+															<li><a href="" class="btn-menu-main">Уникальные квартиры с собственной террасой</a></li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="photo-inner-wrap">
-											<img src="./img/info02.jpg" alt="" class="img-bg-cover">
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/sl-wrap-->
-							<!--sl-wrap-->
-							<div class="sl-wrap swiper-slide">
-								<div class="inner-wrap">
-									<div class="box-inner-wrap">
-										<div class="info-inner-wrap">
-											<div class="info-inner-content">
-												<div class="title-inner-wrap">
-													<div class="section-title">Дом, который знает тебя</div>
-													<p>Открывает перед тобой все двери, лишь взглянув на твоё лицо</p>
-												</div>
-												<div class="text-inner-wrap">
-													<ul class="menu">
-														<li><a href="" class="btn-menu-main">Домофоны с Face ID</a></li>
-														<li><a href="" class="btn-menu-main">Консьерж-сервис</a></li>
-														<li><a href="" class="btn-menu-main">Система «Умный дом»</a></li>
-													</ul>
-												</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="info-inner-wrap">
+													<div class="info-inner-content">
+														<div class="title-inner-wrap title-small-text text-att">
+															<div class="section-title">Жизнь в центре событий</div>
+															<p>Знаковый проект для ценителей комфортной городской среды</p>
+														</div>
+														<div class="text-inner-wrap">
+															<ul class="menu">
+																<li><a href="" class="btn-menu-main">Авторская архитектура</a></li>
+																<li><a href="" class="btn-menu-main">Видовые квартиры</a></li>
+																<li><a href="" class="btn-menu-main">Двор как парк</a></li>
+															</ul>
+														</div>
+													</div>
 											</div>
 										</div>
-										<div class="photo-inner-wrap">
-											<img src="./img/info03.jpg" alt="" class="img-bg-cover">
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/sl-wrap-->
-							<!--sl-wrap-->
-							<div class="sl-wrap swiper-slide">
-								<div class="inner-wrap">
-									<div class="box-inner-wrap">
-										<div class="info-inner-wrap">
-											<div class="info-inner-content">
-												<div class="title-inner-wrap">
-													<div class="section-title">Двор как парк</div>
-													<p>Оригинально спроектированное дворовое пространство создано для абсолютно нового образа жизни. Двор-парк, закрытый от машин и доступа посторонних, обеспечивает безопасность и комфорт для прогулок</p>
-												</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="info-inner-wrap">
+													<div class="info-inner-content">
+														<div class="title-inner-wrap title-small-text text-att">
+															<div class="section-title">Дом, который знает тебя</div>
+															<p>Открывает перед тобой все двери, лишь взглянув на твоё лицо</p>
+														</div>
+														<div class="text-inner-wrap">
+															<ul class="menu">
+																<li><a href="" class="btn-menu-main">Домофоны с Face ID</a></li>
+																<li><a href="" class="btn-menu-main">Консьерж-сервис</a></li>
+																<li><a href="" class="btn-menu-main">Система «Умный дом»</a></li>
+															</ul>
+														</div>
+													</div>
 											</div>
 										</div>
-										<div class="photo-inner-wrap">
-											<img src="./img/info04.jpg" alt="" class="img-bg-cover">
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/sl-wrap-->
-							<!--sl-wrap-->
-							<div class="sl-wrap swiper-slide">
-								<div class="inner-wrap">
-									<div class="box-inner-wrap">
-										<div class="info-inner-wrap">
-											<div class="info-inner-content">
-												<div class="title-inner-wrap">
-													<div class="section-title">СТИЛЬ</div>
-													<p>Интерьеры холлов выполнены по авторскому дизайн-проекту. Благородные, качественные и стильные материалы отделки, элементы декора и мебели создают атмосферу уюта, как дома</p>
-												</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="info-inner-wrap">
+													<div class="info-inner-content">
+														<div class="title-inner-wrap title-small-text text-att">
+															<div class="section-title">Двор как парк</div>
+															<p>Оригинально спроектированное дворовое пространство создано для абсолютно нового образа жизни. Двор-парк, закрытый от машин и доступа посторонних, обеспечивает безопасность и комфорт для прогулок</p>
+														</div>
+													</div>
 											</div>
 										</div>
-										<div class="photo-inner-wrap">
-											<img src="./img/info05.jpg" alt="" class="img-bg-cover">
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="info-inner-wrap">
+													<div class="info-inner-content">
+														<div class="title-inner-wrap title-small-text text-att">
+															<div class="section-title">СТИЛЬ</div>
+															<p>Интерьеры холлов выполнены по авторскому дизайн-проекту. Благородные, качественные и стильные материалы отделки, элементы декора и мебели создают атмосферу уюта, как дома</p>
+														</div>
+													</div>
+											</div>
 										</div>
+										<!--/sl-wrap-->
 									</div>
 								</div>
 							</div>
-							<!--/sl-wrap-->
 						</div>
+						<!-- /slider info -->
+						<!-- slider photos -->
+						<div class="slider-container-wrap">
+							<div class="slider-inner-wrap slider-inner-photos">
+								<div class="slider-wrap swiper">
+									<div class="slider swiper-wrapper">
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="photo-inner-wrap">
+												<img src="./img/info01.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
+											</div>
+										</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="photo-inner-wrap">
+												<img src="./img/info02.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
+											</div>
+										</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="photo-inner-wrap">
+												<img src="./img/info03.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
+											</div>
+										</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="photo-inner-wrap">
+												<img src="./img/info04.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
+											</div>
+										</div>
+										<!--/sl-wrap-->
+										<!--sl-wrap-->
+										<div class="sl-wrap swiper-slide">
+											<div class="photo-inner-wrap">
+												<img src="./img/info05.jpg" alt="" class="img-bg-cover" data-swiper-parallax="20%">
+											</div>
+										</div>
+										<!--/sl-wrap-->
+									</div>
+								</div>
+								<div class="slider-pagination pagination-main slider-inner-photos-pagination"></div>
+							</div>
+						</div>
+						<!-- /slider photos -->
 					</div>
-					<div class="slider-pagination pagination-main slider-inner-pagination"></div>
 				</div>
 		   </div>
 		   <!--/section-main-box-->
 
+		   
+
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-tiles">
+		   <div class="section-main-box cnt-section section-tiles" data-scroll="0" id="section03">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="title-inner-wrap title-small-text text-att">
 								<div class="section-title">Продуманные планировочные решения</div>
 								<ul class="">
@@ -284,7 +305,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="slider-inner-wrap slider-photos">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -352,19 +373,16 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-info-main">
+		   <div class="section-main-box cnt-section section-info-main" data-scroll="0" id="section04">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="title-inner-wrap title-small-text text-att">
 								<div class="section-title">Паркинги и&nbsp;кладовые</div>
 								<p>В комплексе предусмотрен подземный паркинг с кладовыми помещениями. Здесь удобно хранить сезонные, крупногабаритные вещи и спортинвентарь.</p>
 							</div>
-							<div class="buttons-inner-wrap">
-
-							</div>
 						</div>
-						<div class="photo-inner-wrap">
+						<div class="photo-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="elm-photo photo-cover">
 								<img src="./img/parking.jpg" alt="">
 								<div class="photo-title-wrap">
@@ -378,11 +396,11 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-solution">
+		   <div class="section-main-box cnt-section section-solution" data-scroll="0" id="section05">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
 						<div class="info-inner-wrap">
-							<div class="info-inner-content">
+							<div class="info-inner-content item-animation item-atop">
 								<div class="title-inner-wrap title-small-text text-att">
 									<div class="section-title">Планировочные решения</div>
 								</div>
@@ -411,7 +429,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="total-panel-wrap">
+							<div class="total-panel-wrap item-animation item-atop item-animation-delay-05s">
 								<div class="panel-value">79,60 м&sup2;</div>
 								<div class="panel-title">двухкомнатная квартира</div>
 								<div class="panel-action">
@@ -482,12 +500,12 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-lead">
+		   <div class="section-main-box cnt-section section-lead" data-scroll="0" id="section06">
 				<div class="bg-inner-wrap">
 					<img src="./img/title01.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
-					<div class="lead-info-box">
+					<div class="lead-info-box item-animation item-atop">
 						<div class="title-inner-wrap title-small-text">
 							<picture class="elm-photo section-logo">
 								<source srcset="./img/main/logo-content.svg" media="(min-width: 768px)">
@@ -503,13 +521,13 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-form">
+		   <div class="section-main-box cnt-section section-form" data-scroll="0" id="section07">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="title-inner-wrap title-small-text">
+						<div class="title-inner-wrap title-small-text item-animation item-atop">
 							<div class="section-title">Это выгодно!</div>
 						</div>
-						<div class="tiles-inner-wrap">
+						<div class="tiles-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="items-wrap">
 								<!--item wrap-->
 								<div class="item-wrap">
@@ -543,10 +561,10 @@
 								<!--/item wrap-->
 							</div>
 						</div>
-						<div class="title-inner-wrap">
+						<div class="title-inner-wrap item-animation item-atop item-animation-delay-075s">
 							<div class="section-title">Забронируйте помещение для вашего бизнеса</div>
 						</div>
-						<form action="/" class="form-inner-wrap">
+						<form action="/" class="form-inner-wrap item-animation item-atop item-animation-delay-2s">
 							<div class="frm-row">
 								<div class="frm-field">
 									<input type="tel" class="form-input" placeholder="Телефон">
@@ -569,12 +587,12 @@
 		   <!--/section-main-box-->
 
 			<!--section-main-box-->
-		   <div class="section-main-box cnt-section section-lead">
+		   <div class="section-main-box cnt-section section-lead" data-scroll="0" id="section08">
 				<div class="bg-inner-wrap">
 					<img src="./img/title02.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
-					<div class="lead-info-box">
+					<div class="lead-info-box item-animation item-atop">
 						<div class="title-inner-wrap title-small-text">
 							<picture class="elm-photo section-logo">
 								<source srcset="./img/main/logo-content.svg" media="(min-width: 768px)">
@@ -589,10 +607,10 @@
 		   <!--/section-main-box-->
 
 		    <!--section-main-box-->
-			<div class="section-main-box cnt-section section-info-slider">
+			<div class="section-main-box cnt-section section-info-slider" data-scroll="0" id="section09">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap box-reverse photo-v">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="info-inner-content">
 								<div class="title-inner-wrap title-small-text">
 									<div class="section-title title-marker">Двор как парк  </div>
@@ -606,7 +624,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop">
 							<div class="slider-inner-wrap slider-info-slider">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -660,10 +678,10 @@
 		   <!--/section-main-box-->
 
 		    <!--section-main-box-->
-			<div class="section-main-box cnt-section section-info-slider">
+			<div class="section-main-box cnt-section section-info-slider" data-scroll="0" id="section10">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="info-inner-content">
 								<div class="title-inner-wrap title-small-text">
 									<div class="section-title title-marker">Детская и спортивная площадка </div>
@@ -678,7 +696,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="slider-inner-wrap slider-info-slider">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -732,10 +750,10 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-gallery">
+		   <div class="section-main-box cnt-section section-gallery" data-scroll="0" id="section11">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="slider-inner-wrap slider-galmain">
+						<div class="slider-inner-wrap slider-galmain item-animation item-atop">
 							<div class="slider-actions-wrap">
 								<div class="btn-action-ico ico-arrow-main ico-arrow-prev button-slider-galmain-prev"></div>
 								<div class="btn-action-ico ico-arrow-main ico-arrow-next button-slider-galmain-next"></div>
@@ -747,28 +765,28 @@
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="elm-photo photo-cover">
-											<img src="./img/gal01.jpg" alt="">
+											<img src="./img/gal01.jpg" alt="" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="elm-photo photo-cover">
-											<img src="./img/gal02.jpg" alt="">
+											<img src="./img/gal02.jpg" alt="" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="elm-photo photo-cover">
-											<img src="./img/gal03.jpg" alt="">
+											<img src="./img/gal03.jpg" alt="" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
 									<!--sl-wrap-->
 									<div class="sl-wrap swiper-slide">
 										<div class="elm-photo photo-cover">
-											<img src="./img/gal04.jpg" alt="">
+											<img src="./img/gal04.jpg" alt="" data-swiper-parallax="20%">
 										</div>
 									</div>
 									<!--/sl-wrap-->
@@ -781,10 +799,10 @@
 		   <!--/section-main-box-->
 
 			 <!--section-main-box-->
-			<div class="section-main-box cnt-section section-info-slider">
+			<div class="section-main-box cnt-section section-info-slider" data-scroll="0" id="section12">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="info-inner-content">
 								<div class="title-inner-wrap title-small-text">
 									<div class="section-title title-marker">ФУНКЦИОНАЛЬНЫЕ ПРОСТРАНСТВА </div>
@@ -799,7 +817,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="elm-photo photo-cover">
 								<img src="./img/slider03.jpg" alt="" class="">
 							</div>
@@ -810,10 +828,10 @@
 		   <!--/section-main-box-->
 		   
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-gallery">
+		   <div class="section-main-box cnt-section section-gallery" data-scroll="0" id="section13">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="slider-inner-wrap">
+						<div class="slider-inner-wrap item-animation item-atop">
 							<div class="slider-wrap swiper">
 								<div class="slider swiper-wrapper">
 									<!--sl-wrap-->
@@ -832,10 +850,10 @@
 		   <!--/section-main-box-->
 
 		    <!--section-main-box-->
-			<div class="section-main-box cnt-section section-info-slider">
+			<div class="section-main-box cnt-section section-info-slider" data-scroll="0" id="section14">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap photo-v">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="info-inner-content">
 								<div class="title-inner-wrap title-small-text">
 									<div class="section-title title-marker">Элегантный лобби  </div>
@@ -849,7 +867,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="slider-inner-wrap slider-info-slider">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -903,10 +921,10 @@
 		   <!--/section-main-box-->
 
 			 <!--section-main-box-->
-			<div class="section-main-box cnt-section section-info-slider">
+			<div class="section-main-box cnt-section section-info-slider" data-scroll="0" id="section15">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap box-reverse">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="info-inner-content">
 								<div class="title-inner-wrap title-small-text">
 									<div class="section-title title-marker">Подземный паркинг </div>
@@ -920,7 +938,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop">
 							<div class="elm-photo photo-cover">
 								<img src="./img/slider05.jpg" alt="" class="">
 							</div>
@@ -931,12 +949,12 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-lead">
+		   <div class="section-main-box cnt-section section-lead" data-scroll="0" id="section16">
 				<div class="bg-inner-wrap">
 					<img src="./img/title03.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
-					<div class="lead-info-box">
+					<div class="lead-info-box item-animation item-atop">
 						<div class="title-inner-wrap title-small-text">
 							<picture class="elm-photo section-logo">
 								<source srcset="./img/main/logo-content.svg" media="(min-width: 768px)">
@@ -952,11 +970,11 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-map">
+		   <div class="section-main-box cnt-section section-map" data-scroll="0" id="section17">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="map-inner-wrap"><img src="./img/map.jpg" alt="" class="img-bg-cover"></div>
-						<div class="footer-inner-wrap">
+						<div class="map-inner-wrap item-animation item-atop "><img src="./img/map.jpg" alt="" class="img-bg-cover"></div>
+						<div class="footer-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="info-wrap">
 								<div class="elm-ico section-ico">
 									<img src="./img/icons/location.svg" alt="">
@@ -974,13 +992,144 @@
 		   </div>
 		   <!--/section-main-box-->
 
+		    <!--section-main-box-->
+			<div class="section-main-box cnt-section section-logo-tiles" data-scroll="0" id="section18">
+				<div class="inner-wrap">
+					<div class="box-inner-wrap">
+						<div class="items-inner-wrap">
+							<div class="items-wrap">
+								<!--item wrap-->
+								<div class="item-wrap wrap-logo">
+									<div class="item-tile-logo">
+										<div class="tile-photo">
+											<img src="./img/main/logo-content.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+								<!--item wrap-->
+								<div class="item-wrap">
+									<div class="item-tile-logo-info">
+										<div class="tile-title-wrap">
+											<div class="tile-ico">
+												<img src="./img/icons/08.png" alt="">
+											</div>
+											<div class="tile-title">20</div>
+											<div class="tile-title-info">минут</div>
+										</div>
+										<div class="tile-info-wrap">
+											<div class="tile-info">Аэропорт имени А.В. Суворова г.Ставрополь</div>
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+								<!--item wrap-->
+								<div class="item-wrap">
+									<div class="item-tile-logo-info">
+										<div class="tile-title-wrap">
+											<div class="tile-ico">
+												<img src="./img/icons/08.png" alt="">
+											</div>
+											<div class="tile-title">2</div>
+											<div class="tile-title-info">часа</div>
+										</div>
+										<div class="tile-info-wrap">
+											<div class="tile-info">Аэропорт имени М.Ю. Лермонтова г.Минеральные Воды</div>
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+								<!--item wrap-->
+								<div class="item-wrap">
+									<div class="item-tile-logo-info">
+										<div class="tile-title-wrap">
+											<div class="tile-ico">
+												<img src="./img/icons/08.png" alt="">
+											</div>
+											<div class="tile-title">2:30</div>
+											<br>
+											<div class="tile-title-info">часа & минут</div>
+										</div>
+										<div class="tile-info-wrap">
+											<div class="tile-info">курорты КМВ</div>
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+								<!--item wrap-->
+								<div class="item-wrap">
+									<div class="item-tile-logo-info">
+										<div class="tile-title-wrap">
+											<div class="tile-ico">
+												<img src="./img/icons/08.png" alt="">
+											</div>
+											<div class="tile-title">3:20</div>
+											<br>
+											<div class="tile-title-info">часа & минут</div>
+										</div>
+										<div class="tile-info-wrap">
+											<div class="tile-info">горнолыжный курорт Архыз</div>
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+								<!--item wrap-->
+								<div class="item-wrap">
+									<div class="item-tile-logo-info">
+										<div class="tile-title-wrap">
+											<div class="tile-ico">
+												<img src="./img/icons/08.png" alt="">
+											</div>
+											<div class="tile-title">6</div>
+											<div class="tile-title-info">часов</div>
+										</div>
+										<div class="tile-info-wrap">
+											<div class="tile-info">Черноморское побережье </div>
+										</div>
+									</div>
+									<div class="ani-line active">
+										<div class="line line01">
+											<svg class="" viewBox="0 0 1514 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M37.0378 548.458C63.0048 503.29 101.964 468.152 148.182 448.216C194.399 428.279 245.433 424.598 293.772 437.713C342.111 450.828 385.201 480.047 416.701 521.07C448.201 562.092 466.446 612.751 468.751 665.59L467.797 665.637C465.502 613.014 447.331 562.563 415.961 521.709C384.59 480.855 341.676 451.755 293.535 438.694C245.394 425.632 194.569 429.299 148.541 449.153C102.513 469.008 63.7138 504.002 37.8531 548.985L37.0378 548.458Z" stroke="#BC9C65" stroke-width="1" class="" />
+										</svg>
+										</div>
+										<div class="line line02">
+											<svg class="" viewBox="0 0 1514 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M37.0218 548.272C71.9993 481.533 129.467 427.26 200.67 393.72C271.873 360.18 352.908 349.212 431.432 362.486C509.956 375.76 581.664 412.548 635.633 467.248C689.602 521.948 722.873 591.559 730.378 665.48L729.485 665.558C721.998 591.819 688.808 522.378 634.972 467.812C581.135 413.247 509.603 376.548 431.272 363.307C352.94 350.065 272.103 361.007 201.075 394.465C130.047 427.923 72.7202 482.063 37.8284 548.638L37.0218 548.272Z" stroke="#BC9C65" stroke-width="1" class="" />
+										</svg>
+										</div>
+										<div class="line line03">
+											<svg class="" viewBox="0 0 1514 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M38.6757 546.801C74.8657 443.456 147.132 355.392 243.165 297.609C339.198 239.826 453.058 215.899 565.35 229.903C677.643 243.906 781.422 294.975 859.012 374.41C936.601 453.844 983.201 556.732 990.875 665.547L990.043 665.602C982.383 556.972 935.862 454.259 858.405 374.96C780.947 295.66 677.345 244.678 565.243 230.699C453.142 216.719 339.476 240.605 243.606 298.29C147.737 355.974 75.5936 443.888 39.4652 547.057L38.6757 546.801Z" stroke="#BC9C65" stroke-width="1" class="" />
+										</svg>
+										</div>
+										<div class="line line04">
+											<svg class="" viewBox="0 0 1514 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M38.8413 546.057C75.9191 406.864 162.843 285.191 283.905 203.025C404.967 120.859 552.182 83.619 698.949 98.0347C845.716 112.45 982.353 177.571 1084.17 281.629C1185.99 385.687 1246.27 521.818 1254.12 665.424L1253.21 665.472C1245.36 522.079 1185.17 386.15 1083.51 282.247C981.84 178.344 845.406 113.32 698.857 98.9261C552.308 84.5318 405.312 121.716 284.43 203.76C163.547 285.804 76.7533 407.296 39.7307 546.282L38.8413 546.057Z" stroke="#BC9C65" stroke-width="1" class="" />
+										</svg>
+										</div>
+										<div class="line line05">
+											<svg class="" viewBox="0 0 1514 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M38.7561 544.976C69.1372 382.533 168.788 236.231 317.591 135.603C466.395 34.9755 653.268 -12.4818 840.485 2.8115C1027.7 18.1048 1201.32 95.0097 1326.29 218.001C1451.25 340.992 1518.26 500.909 1513.79 665.468L1512.69 665.445C1517.15 501.131 1450.24 341.452 1325.46 218.643C1200.68 95.835 1027.32 19.0444 840.382 3.77381C653.444 -11.4968 466.849 35.89 318.266 136.368C169.684 236.846 70.1815 382.931 39.8457 545.132L38.7561 544.976Z" stroke="#BC9C65" stroke-width="1" class="" />
+										</svg>
+										</div>
+									</div>
+								</div>
+								<!--/item wrap-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/section-main-box-->
+
 			<!--section-main-box-->
-		   <div class="section-main-box cnt-section section-lead">
+		   <div class="section-main-box cnt-section section-lead" data-scroll="0" id="section19">
 				<div class="bg-inner-wrap">
 					<img src="./img/title04.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
-					<div class="lead-info-box">
+					<div class="lead-info-box item-animation item-atop">
 						<div class="title-inner-wrap title-small-text">
 							<picture class="elm-photo section-logo">
 								<source srcset="./img/main/logo-content.svg" media="(min-width: 768px)">
@@ -995,10 +1144,10 @@
 		   <!--/section-main-box-->
 		   
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-tiles-grid">
+		   <div class="section-main-box cnt-section section-tiles-grid" data-scroll="0" id="section20">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="items-wrap">
+						<div class="items-wrap item-animation item-atop">
 							<!--item wrap-->
 							<div class="item-wrap">
 								<div class="item-tile-info-ico">
@@ -1096,14 +1245,14 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-info-tiles">
+		   <div class="section-main-box cnt-section section-info-tiles" data-scroll="0" id="section21">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="title-inner-wrap title-small-text text-att">
+						<div class="title-inner-wrap title-small-text text-att item-animation item-atop">
 							<div class="section-title">Способы покупки</div>
 							<p>Выберите подходящий для вас способ покупки квартиры</p>
 						</div>
-						<div class="items-inner-wrap">
+						<div class="items-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="items-wrap">
 								<!--item wrap-->
 								<div class="item-wrap">
@@ -1131,7 +1280,7 @@
 								<!--/item wrap-->
 							</div>
 						</div>
-						<div class="button-inner-wrap">
+						<div class="button-inner-wrap item-animation item-atop item-animation-delay-075s">
 							<div class="button-wrap">
 								<a href="" class="btn">
 									<div class="button-title">получить консультацию</div>
@@ -1144,10 +1293,10 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-tiles section-tiles-second">
+		   <div class="section-main-box cnt-section section-tiles section-tiles-second" data-scroll="0" id="section22">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="top-title-wrap">
 								<div class="section-title title-att">ход строительства</div>
 								<div class="section-action">
@@ -1179,7 +1328,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="slider-inner-wrap slider-photos">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -1295,7 +1444,7 @@
 							</div>
 							<div class="photos-slider-count"></div>
 						</div>
-						<div class="button-inner-wrap">
+						<div class="button-inner-wrap item-animation item-atop item-animation-delay-075s">
 							<div class="button-wrap">
 								<a href="" class="btn button-more js-btn-tgl">
 									<div class="button-title">показать еще</div>
@@ -1308,14 +1457,14 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-info-tiles">
+		   <div class="section-main-box cnt-section section-info-tiles" data-scroll="0" id="section23">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap box-small">
-						<div class="title-inner-wrap title-small-text text-att">
+						<div class="title-inner-wrap title-small-text text-att item-animation item-atop">
 							<div class="section-title">документы</div>
 							<p>В соответствии с Федеральным законом от 30.12.2004 № 214-ФЗ, полная информация о застройщике и проекте строительства (в том числе проектные декларации) размещена на сайте «Наш дом РФ»</p>
 						</div>
-						<div class="items-inner-wrap">
+						<div class="items-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="items-wrap">
 								<!--item wrap-->
 								<div class="item-wrap">
@@ -1364,15 +1513,15 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-tiles section-tiles-third">
+		   <div class="section-main-box cnt-section section-tiles section-tiles-third" data-scroll="0" id="section24">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="top-title-wrap">
 								<div class="section-title title-att">новости и акции</div>
 							</div>
 						</div>
-						<div class="photos-inner-wrap">
+						<div class="photos-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="slider-inner-wrap slider-photos">
 								<div class="slider-wrap swiper">
 									<div class="slider swiper-wrapper">
@@ -1563,7 +1712,7 @@
 							</div>
 							<div class="photos-slider-count"></div>
 						</div>
-						<div class="button-inner-wrap">
+						<div class="button-inner-wrap item-animation item-atop item-animation-delay-075s">
 							<div class="button-wrap">
 								<a href="" class="btn button-more js-btn-tgl">
 									<div class="button-title">показать еще</div>
@@ -1575,17 +1724,14 @@
 		   </div>
 		   <!--/section-main-box-->
 
-		  
-
-
 			<!--section-main-box-->
-			<div class="section-main-box cnt-section section-lead-logo">
+			<div class="section-main-box cnt-section section-lead-logo" data-scroll="0" id="section25">
 				<div class="bg-inner-wrap">
 					<img src="./img/bg-lead.jpg" alt="" class="img-bg-cover">
 				</div>
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="title-inner-wrap title-small-text text-att">
+						<div class="title-inner-wrap title-small-text text-att item-animation item-atop item-animation-delay-05s">
 							<div class="logo">
 								<img src="./img/main/logo-lead.svg" alt="">
 							</div>
@@ -1598,10 +1744,10 @@
 		   <!--/section-main-box-->
 
 		   <!--section-main-box-->
-		   <div class="section-main-box cnt-section section-main-about">
+		   <div class="section-main-box cnt-section section-main-about" data-scroll="0" id="section26">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="info-inner-wrap">
+						<div class="info-inner-wrap item-animation item-atop">
 							<div class="section-title title-att">для тех, кто всегда выбирает лучшее</div>
 							<p>Специализированный застройщик «М Груп» — это современный и ответственный подход к осуществлению проектов в сфере жилищного строительства.</p>
 							<p>Философия компании заключается в воплощении в жизнь решении, способных удивлять и становиться частью городской истории. Когда недвижимость - не просто квадратные метры и этажи, а целостный, продуманный до деталей продукт.</p>
@@ -1621,13 +1767,13 @@
 		   <!--/section-main-box-->
 
 			<!--section-main-box-->
-			<div class="section-main-box cnt-section section-contacts">
+			<div class="section-main-box cnt-section section-contacts" data-scroll="0" id="section27">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="title-inner-wrap title-small-text text-att">
+						<div class="title-inner-wrap title-small-text text-att item-animation item-atop">
 							<div class="section-title title-marker">контакты </div>
 						</div>
-						<div class="sections-inner-wrap">
+						<div class="sections-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="section-inner-wrap">
 								<div class="info-inner-wrap">
 									<div class="info-inner-content">
@@ -1661,18 +1807,16 @@
 			</div>
 			<!--/section-main-box-->
 
-		   
-
 		    <!--section-main-box-->
-			<div class="section-main-box cnt-section section-footer">
+			<div class="section-main-box cnt-section section-footer" data-scroll="0" id="section28">
 				<div class="inner-wrap">
 					<div class="box-inner-wrap">
-						<div class="logo-inner-wrap">
+						<div class="logo-inner-wrap item-animation item-atop">
 							<div class="logo">
 								<img src="./img/main/logo-content.svg" alt="">
 							</div>
 						</div>
-						<div class="sections-inner-wrap">
+						<div class="sections-inner-wrap item-animation item-atop item-animation-delay-05s">
 							<div class="section-inner-wrap">
 								<div class="info-inner-wrap">
 									<div class="section-title"><a href="tel:88652991111">8 (8652) 99-11-11</a></div>
@@ -1758,7 +1902,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="footer-info-wrap">
+						<div class="footer-info-wrap item-animation item-atop item-animation-delay-075s">
 							<div class="info-wrap">
 								<p>Любая информация, представленная на данном сайте носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 ГК РФ</p>
 							</div>
@@ -1795,29 +1939,6 @@
 				</div>
 			</div>
 			<!--/section-main-box-->
-
-			
-
-			
-
-
-			
-
-			
-
-			
-			
-
-			
-
-			
-
-			
-			
-
-		  
-
-		   
             
         </div>
         <!-- /wrap -->

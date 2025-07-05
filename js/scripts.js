@@ -3,8 +3,48 @@ window.addEventListener('load', function() {
 		document.body.classList.add('loaded');
 	}, 1000);
 
+	//parallax
+	const scrollContainer = document.getElementById('wrap-scroll');
+	scrollContainer.addEventListener('scroll', function() {
+		const scrolled = window.scrollY;
+
+		const parallaxElements = document.querySelectorAll('.js-parallax');
+
+		parallaxElements.forEach(element => {
+			const offset = element.getBoundingClientRect().top;
+			const speed = 0.5; // Скорость параллакса, можно настроить
+			const translateY = (scrolled - offset) * speed;
+
+			element.style.transform = `translateY(${translateY}px)`;
+		});
+	});
+
+
+	// items animate
+	function isElementInViewport(el) {
+		let rect = el.getBoundingClientRect();
+		return (rect.top <= window.innerHeight);
+	}
+	scrollContainer.addEventListener('scroll', function() {
+		let items = document.querySelectorAll('.item-animation');
+		let windowHeight = window.innerHeight + window.pageYOffset;
+		
+		items.forEach(function(item) {
+			if (isElementInViewport(item) && item.offsetTop < windowHeight) {
+				item.classList.add('item-active');
+			}
+		});
+	});
+
+
+
 });
+
+
 document.addEventListener("DOMContentLoaded", function() {
+
+
+	
 
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
@@ -224,7 +264,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: false,
-		speed: 400,
+		speed: 800,
+		parallax: true,
 		pagination: {
 			el: '.slider-main-pagination',
 			clickable: true,
@@ -265,6 +306,45 @@ document.addEventListener("DOMContentLoaded", function() {
 			disableOnInteraction: false,
 		},
 		navigation: false,
+	});
+
+	//slider inner photos
+	const swiperSliderInnerPhotos = new Swiper('.slider-inner-photos .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: false,
+		parallax: true,
+		speed: 800,
+		pagination: {
+			el: '.slider-inner-photos-pagination',
+			clickable: true,
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		navigation: false,
+	});
+
+	//slider inner info
+	const swiperSliderInnerInfo = new Swiper('.slider-inner-info .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: false,
+		speed: 800,
+		pagination: false,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		navigation: false,
+		breakpoints: {
+			768: {
+				direction: 'vertical',
+			},
+		},
 	});
 
 
@@ -364,7 +444,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: false,
-		speed: 400,
+		parallax: true,
+		speed: 800,
 		pagination: {
 			el: '.slider-galmain-pagination',
 			clickable: true,
