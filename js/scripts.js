@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
 
 		parallaxElements.forEach(element => {
 			const offset = element.getBoundingClientRect().top;
-			const speed = 0.5; // Скорость параллакса, можно настроить
+			const speed = 0.5; 
 			const translateY = (scrolled - offset) * speed;
 
 			element.style.transform = `translateY(${translateY}px)`;
@@ -20,13 +20,14 @@ window.addEventListener('load', function() {
 	});
 
 
-	// items animate
+	// items animate and schema
 	function isElementInViewport(el) {
 		let rect = el.getBoundingClientRect();
 		return (rect.top <= window.innerHeight);
 	}
 	scrollContainer.addEventListener('scroll', function() {
 		let items = document.querySelectorAll('.item-animation');
+		let sectionSchema = document.querySelector('.ani-line');
 		let windowHeight = window.innerHeight + window.pageYOffset;
 		
 		items.forEach(function(item) {
@@ -34,6 +35,9 @@ window.addEventListener('load', function() {
 				item.classList.add('item-active');
 			}
 		});
+		if (isElementInViewport(sectionSchema) && sectionSchema.offsetTop < windowHeight) {
+			sectionSchema.classList.add('active');
+		}
 	});
 
 
