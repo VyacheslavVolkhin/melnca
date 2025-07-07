@@ -2536,6 +2536,12 @@ body.popup-open {
   margin-top: -30px;
   width: 60px;
   height: 60px;
+  transition: all ease 0.2s;
+}
+.section-solution .elm-photo.photo-action:hover {
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
 }
 .section-solution .elm-photo.photo-action:before {
   display: none !important;
@@ -3280,6 +3286,77 @@ body.popup-open {
   opacity: 0;
   transition: all ease 2s;
 }
+.popup-box:has(.popup-gallery-box) {
+  padding: 40px 70px 40px var(--paddingContainer);
+  padding: 4rem 7rem 4rem var(--paddingContainer);
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.popup-gallery-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 auto;
+  max-width: 580px;
+}
+.popup-gallery-box .photos-slider-box {
+  margin: 0;
+}
+.photos-slider-box {
+  position: relative;
+  display: block;
+}
+.photos-slider-box .slider-media-main {
+  display: block;
+  position: relative;
+}
+.photos-slider-box .slider-media-main .slider-wrap {
+  margin: 0;
+}
+.photos-slider-box .slider-media-thumbs {
+  margin: 40px 0 0 0;
+  margin: 4rem 0 0 0;
+}
+.photos-slider-box .slider-media-thumbs .slider-wrap {
+  margin: 0 -10px;
+  margin: 0 -1rem;
+}
+.photos-slider-box .slider-media-thumbs .sl-wrap {
+  padding: 0 10px;
+  padding: 0 1rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  width: 120px;
+  width: 12rem;
+}
+.photos-slider-box .slider-media-thumbs .elm-photo {
+  aspect-ratio: 1;
+}
+.photos-slider-box .slider-media-thumbs .slider {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-height: 999px) {
+  .popup-gallery-box .photos-slider-box .slider-media-thumbs {
+    margin-top: 2rem;
+  }
+}
+@media (max-height: 899px) {
+  .popup-gallery-box .photos-slider-box .slider-media-thumbs {
+    display: none;
+  }
+}
 @media (max-width: 1439px) {
   .main-slider-box .inner-wrap,
   .inner-slider-box .inner-wrap {
@@ -3312,6 +3389,9 @@ body.popup-open {
       margin: 0;
       padding: 20px var(--paddingContainer);
     }
+  }
+  .section-solution .elm-photo.photo-action {
+    display: none;
   }
   .section-tiles.section-tiles-third .slider-wrap {
     margin: 0 -6px;
