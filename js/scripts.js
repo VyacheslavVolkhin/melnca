@@ -7,6 +7,41 @@ window.addEventListener('load', function() {
 	}, 1000);
 
 
+	//more section
+	let sectionMoreBoxes = document.querySelectorAll('.section-more-box');
+
+	sectionMoreBoxes.forEach(section => {
+		let boxInnerWrap = section.querySelector('.box-inner-wrap');
+		let innerWrap = section.querySelector('.inner-wrap');
+
+		if (boxInnerWrap && innerWrap) { 
+			let boxInnerWrapOffset = boxInnerWrap.offsetTop;
+			innerWrap.style.paddingTop = boxInnerWrapOffset + 'px';
+		}
+	});
+	document.querySelectorAll('.js-btn-more').forEach(button => {
+		button.addEventListener('click', function(event) {
+			this.classList.toggle('active');
+			event.preventDefault();
+
+			const sectionMore = this.closest('.section-main-box');
+			const isActive = sectionMore.classList.toggle('active-more');
+			console.log(isActive)
+			if (isActive) {
+				window.scrollTo({
+					top: sectionMore.offsetTop + window.scrollY + 100,
+					behavior: 'smooth'
+				});
+			} else {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			}
+		});
+	});
+
+
 	//active section
 	const scrollContainer = document.getElementById('wrap-scroll');
 	const sections = document.querySelectorAll('.section-main-box');
@@ -71,6 +106,11 @@ window.addEventListener('load', function() {
 			sectionSchema.classList.add('active');
 		}
 	});
+
+
+
+
+	
 
 
 
