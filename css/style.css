@@ -2198,6 +2198,10 @@ body.popup-open {
 .section-main-about .text-coursive {
   font-size: 16px;
 }
+.section-info-sliders.section-main-box {
+  height: 100vh;
+  overflow: hidden;
+}
 .section-info-sliders .box-inner-wrap {
   display: -ms-flexbox;
   display: flex;
@@ -2205,14 +2209,39 @@ body.popup-open {
       flex-direction: column;
   -ms-flex: 1;
       flex: 1;
-  pointer-events: none;
 }
 .section-info-sliders .slider-container-wrap {
   min-height: 250px;
   position: relative;
-  overflow: hidden;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  overflow: hidden;
+}
+.section-info-sliders .slider-container-wrap:first-child {
+  overflow: visible;
+  z-index: 2;
+}
+.section-info-sliders .slider-container-wrap:first-child .slider-inner-wrap,
+.section-info-sliders .slider-container-wrap:first-child .sl-wrap,
+.section-info-sliders .slider-container-wrap:first-child .slider-wrap {
+  overflow: visible;
+}
+.section-info-sliders .slider-container-wrap:first-child .slider,
+.section-info-sliders .slider-container-wrap:first-child .slider-wrap {
+  overflow-y: visible;
+}
+.section-info-sliders .slider-container-wrap:first-child .sl-wrap {
+  overflow: visible;
+}
+.section-info-sliders .slider-container-wrap:first-child .sl-wrap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 10;
 }
 .section-info-sliders .slider-container-wrap:last-child {
   -ms-flex: 1;
@@ -2982,6 +3011,15 @@ body.popup-open {
 .section-info-slider .title-inner-wrap .section-title {
   font-weight: 600;
 }
+.section-info-slider .sl-wrap {
+  opacity: 1;
+  overflow: hidden;
+  transition: all ease 1.6s;
+}
+.section-info-slider .sl-wrap.swiper-slide-fully-visible {
+  transition: all ease 0.8s;
+  opacity: 1;
+}
 .total-panel-wrap {
   display: -ms-flexbox;
   display: flex;
@@ -3226,6 +3264,22 @@ body.popup-open {
   -ms-flex: 1;
       flex: 1;
 }
+.button-inner-wrap:has(.btn.active) ~ .more-inner-wrap {
+  height: auto;
+  opacity: 1;
+}
+.more-inner-wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all ease 2s;
+}
 @media (max-width: 1439px) {
   .main-slider-box .inner-wrap,
   .inner-slider-box .inner-wrap {
@@ -3399,6 +3453,12 @@ body.popup-open {
     padding-left: 0;
   }
   .section-info-sliders {
+    overflow: hidden;
+    /* &:has(.swiper-slide-active:last-child) {
+			.box-inner-wrap {
+				pointer-events: none;
+			}
+		} */
     /* .slider-wrap, .slider-inner-wrap {
 			flex: 1;
 			width: 100%;
@@ -3432,11 +3492,31 @@ body.popup-open {
   }
   .section-info-sliders .slider-container-wrap:first-child {
     height: 100dvh;
+    overflow: visible;
+    z-index: 2;
   }
   .section-info-sliders .slider-container-wrap:first-child .slider-inner-wrap,
   .section-info-sliders .slider-container-wrap:first-child .sl-wrap,
   .section-info-sliders .slider-container-wrap:first-child .slider-wrap {
     height: 100dvh;
+    overflow: visible;
+  }
+  .section-info-sliders .slider-container-wrap:first-child .slider,
+  .section-info-sliders .slider-container-wrap:first-child .slider-wrap {
+    overflow-x: visible;
+  }
+  .section-info-sliders .slider-container-wrap:first-child .sl-wrap {
+    overflow: visible;
+  }
+  .section-info-sliders .slider-container-wrap:first-child .sl-wrap:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 10;
   }
   .section-info-sliders .slider-container-wrap:last-child {
     width: 50%;
@@ -4025,6 +4105,9 @@ body.popup-open {
     font-weight: 600;
     margin: 0 0 10px 0;
   }
+  .section-tiles .slider {
+    z-index: 100;
+  }
   .section-tiles .info-inner-wrap {
     width: 100%;
     -ms-flex-negative: 0;
@@ -4358,35 +4441,40 @@ body.popup-open {
     font-size: 3.2rem;
     padding-left: 10px;
   }
+  .section-main-box.active .button-inner-wrap:before,
+  .section-main-box.active .button-inner-wrap:after {
+    animation: widthFull ease 2.8s forwards 1.6s;
+  }
   .button-inner-wrap {
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
+  }
+  .button-inner-wrap:before,
+  .button-inner-wrap:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--clr-att);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+  }
+  .button-inner-wrap:before {
+    left: auto;
+    right: 50%;
   }
   .button-inner-wrap .btn {
     width: auto;
   }
   .button-inner-wrap .button-wrap {
     padding: 0 4rem;
+    background: #fff;
     width: auto;
     z-index: 2;
     position: relative;
-  }
-  .button-inner-wrap .button-wrap:before,
-  .button-inner-wrap .button-wrap:after {
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 1px;
-    background: var(--clr-att);
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-top: -1px;
-  }
-  .button-inner-wrap .button-wrap:before {
-    left: auto;
-    right: 100%;
   }
   .sections-inner-wrap {
     margin: 0 -2rem;
@@ -6492,3 +6580,76 @@ body:not(.loaded) .btn-action-page {
   }
 }
 /* end any lines */
+/* popup and menu animate */
+@media (min-width: 1024px) {
+  .popup-outer-box {
+    transform: translateX(-100%);
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    transition: all ease 0.8s;
+  }
+  .popup-outer-box:not(.active) {
+    pointer-events: none;
+  }
+  .popup-outer-box.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .popup-outer-box.active .popup-box {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .popup-box {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all ease 0.8s;
+  }
+  .popup-menu-wrap .active ~ .popup-content-block {
+    background: rgba(0, 0, 0, 0.8);
+    height: 110vh;
+  }
+  .popup-menu-wrap .active ~ .popup-content-block .popup-inner-wrap {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  .popup-menu-wrap .popup-content-block {
+    display: block;
+    background: rgba(0, 0, 0, 0);
+    transition: background ease 0.3s;
+    height: 0;
+    bottom: auto;
+  }
+  .popup-menu-wrap .popup-inner-wrap {
+    transition: all ease 1.2s;
+    opacity: 0;
+    transform: translate(100%, 100%);
+  }
+}
+@keyframes showTr {
+  from {
+    transform: translate(100%, 100%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes hideTr {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(100%, 100%);
+  }
+}
+/* end popup and menu animate */
+/* ani all */
+@keyframes widthFull {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* end ani all */

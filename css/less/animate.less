@@ -327,3 +327,74 @@ body {
 	}
 }
 /* end any lines */
+
+/* popup and menu animate */
+@media (min-width: 1024px) {
+	.popup-outer-box {
+		transform: translateX(-100%);
+		display: flex;
+		opacity: 0;
+		transition: all ease 0.8s;
+		&:not(.active) {
+			pointer-events: none;
+		}
+		&.active {
+			opacity: 1;;
+			transform: translateX(0);
+			.popup-box {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+	}
+	.popup-box {
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: all ease 0.8s;
+	}
+	.popup-menu-wrap {
+		.active~.popup-content-block {
+			background: rgba(0,0,0,.8);
+			height: 110vh;
+			.popup-inner-wrap {
+				transform: translate(0%, 0%);
+				opacity: 1;
+			}
+		}
+		.popup-content-block {
+			display: block;
+			background: rgba(0,0,0,.0);
+			transition: background ease 0.3s;
+			height: 0;
+			bottom: auto;
+		}
+		.popup-inner-wrap {
+			transition: all ease 1.2s;
+			opacity: 0;
+			transform: translate(100%, 100%);
+		}
+	}
+}
+@keyframes showTr {
+	from {
+		transform: translate(100%, 100%)
+	}
+	to {
+		transform: translate(0%, 0%)
+	}
+}
+@keyframes hideTr {
+	from {
+		transform: translate(0%, 0%)
+	}
+	to {
+		transform: translate(100%, 100%)
+	}
+}
+/* end popup and menu animate */
+/* ani all */
+@keyframes widthFull {
+	from {width: 0%;}
+	to {width: 100%;}
+}
+/* end ani all */
