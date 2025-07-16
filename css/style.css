@@ -42,6 +42,9 @@
 .text-coursive * {
   font-family: 'TT Backwards Script', serif;
 }
+* {
+  font-variant-numeric: lining-nums proportional-nums;
+}
 /* ----------------------------------- *\
 			main styles
 \* ----------------------------------- */
@@ -2673,6 +2676,8 @@ body.popup-open {
 }
 .section-about .inner-wrap:before {
   filter: brightness(0) invert(1);
+  opacity: 1;
+  display: block;
 }
 .section-about .bg-inner-wrap:after {
   opacity: 1;
@@ -3385,6 +3390,29 @@ body.popup-open {
   .inner-slider-box .inner-wrap {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .section-info-slider .box-inner-wrap,
+  .section-info .box-inner-wrap {
+    max-height: calc(100dvh - 134px);
+    min-height: calc(100dvh - 134px);
+  }
+  .section-info-slider .inner-wrap,
+  .section-gallery .inner-wrap,
+  .section-info-slider.section-main-box .inner-wrap {
+    padding-top: 134px;
+  }
+  .section-info-slider .inner-wrap:after,
+  .section-gallery .inner-wrap:after,
+  .section-info-slider.section-main-box .inner-wrap:after {
+    display: none;
+  }
+  .section-tiles .inner-wrap {
+    padding-top: 30px;
+  }
+  .section-about .inner-wrap {
+    padding-top: 55px;
   }
 }
 @media (max-width: 767px) {
@@ -6460,18 +6488,18 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   will-change: transform;
   transform: translateZ(0);
 }
-body:not(.loaded) {
+body:not(.loaded):has(.wrap:not(.wrap-nostart)) {
   overflow: hidden;
 }
-body:not(.loaded) .header {
+body:not(.loaded):has(.wrap:not(.wrap-nostart)) .header {
   margin-top: -50px;
   margin-top: -5rem;
 }
-body:not(.loaded) .footer {
+body:not(.loaded):has(.wrap:not(.wrap-nostart)) .footer {
   margin-bottom: -50px;
   margin-bottom: -5rem;
 }
-body:not(.loaded) .btn-action-page {
+body:not(.loaded):has(.wrap:not(.wrap-nostart)) .btn-action-page {
   transform: translatey(-5rem);
   transition: all ease 1s;
 }
@@ -6482,6 +6510,9 @@ body:not(.loaded) .btn-action-page {
 .loaded .splash-screen-box {
   transform: scale(0);
   opacity: 0;
+}
+.wrap-nostart .splash-screen-box {
+  display: none;
 }
 .splash-screen-box {
   position: fixed;

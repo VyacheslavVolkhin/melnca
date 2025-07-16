@@ -67,17 +67,19 @@
 }
 body {
 	&:not(.loaded) {
-		overflow: hidden;
-		.header {
-			margin-top: -5rem;
-		}
-		.footer {
-			margin-bottom: -5rem;
-		}
-		.btn-action-page  {
-			transform: translatey(-5rem);
-			transition: all ease 1s;
-			&.button-prev {
+		&:has(.wrap:not(.wrap-nostart)) {
+			overflow: hidden;
+			.header {
+				margin-top: -5rem;
+			}
+			.footer {
+				margin-bottom: -5rem;
+			}
+			.btn-action-page  {
+				transform: translatey(-5rem);
+				transition: all ease 1s;
+				&.button-prev {
+				}
 			}
 		}
 	}
@@ -89,6 +91,12 @@ body {
 	.splash-screen-box {
 		transform: scale(0);
 		opacity: 0;
+	}
+}
+body {}
+.wrap-nostart {
+	.splash-screen-box {
+		display: none;
 	}
 }
 .splash-screen-box {
