@@ -436,9 +436,20 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   transition: all ease 0.2s;
 }
+.wrap:has(.section-main-box.active) .header {
+  transform: translateY(-100%);
+}
+.wrap:has(.section-main-box.active).scroll-up .header {
+  transform: translateY(0%);
+}
 .header {
   z-index: 99;
   background: rgba(255, 255, 255, 0.3);
+  transition: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .header:not(:has(.popup-menu-wrap .btn-popup.active)) {
   -webkit-backdrop-filter: blur(3.5px);
@@ -796,18 +807,19 @@ body.popup-open {
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
-  .wrap-main .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
 }
 @media (min-width: 1024px) {
+  .wrap-inner {
+    padding-top: 110px;
+  }
   .header {
     background: var(--clr-base-white);
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .header:before {
     border-top: none;
@@ -2475,6 +2487,9 @@ body.popup-open {
       flex-shrink: 0;
   padding: 0 var(--paddingContainer) 20px var(--paddingContainer);
 }
+.section-solution .total-panel-wrap .frm-content:not(.active) {
+  display: none;
+}
 .section-solution .title-inner-wrap {
   margin-bottom: 10px;
 }
@@ -2488,6 +2503,14 @@ body.popup-open {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+.section-solution .photos-inner-wrap .frm-content:not(.active) {
+  -ms-flex: 0 0 0px;
+      flex: 0 0 0;
+  height: 0;
+  min-height: 0;
+  pointer-events: none;
+  z-index: -999;
 }
 .section-solution .slider-inner-wrap,
 .section-solution .slider-wrap {
@@ -3314,6 +3337,17 @@ body.popup-open {
   opacity: 0;
   transition: all ease 2s;
 }
+.popup-outer-box:has(.popup-gallery-box) > .btn-popup-close {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.popup-outer-box:has(.popup-gallery-box) > .btn-popup-close:before {
+  transition: none;
+}
+.popup-outer-box:has(.popup-gallery-box) > .btn-popup-close:hover:before {
+  filter: brightness(0) invert(1);
+}
 .popup-box:has(.popup-gallery-box) {
   padding: 40px 70px 40px var(--paddingContainer);
   padding: 4rem 7rem 4rem var(--paddingContainer);
@@ -3321,6 +3355,11 @@ body.popup-open {
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
+}
+.popup-box:has(.popup-gallery-box) .btn-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 .popup-gallery-box {
   display: -ms-flexbox;
@@ -3535,6 +3574,10 @@ body.popup-open {
   }
 }
 @media (min-width: 768px) {
+  .section-info .info-inner-wrap,
+  .section-info-slider .info-inner-wrap {
+    background: none;
+  }
   .section-main-box .inner-wrap {
     padding-top: 16rem;
     padding-bottom: 16rem;

@@ -93,10 +93,24 @@ html.with-fancybox body.hide-scrollbar {
 		transition: all ease 0.2s;
 	}
 }
-
+.wrap {
+	&:has(.section-main-box.active) {
+		.header {
+			transform: translateY(-100%);
+		}
+		&.scroll-up {
+			.header {
+				transform: translateY(0%);
+			}
+		}
+	}
+}
 .header {
 	z-index: 99;
 	background: rgba(255, 255, 255, 0.30);
+	transition: none;
+	position: fixed;
+	top: 0;left: 0;right: 0;
 	&:not(:has(.popup-menu-wrap .btn-popup.active)) {
 		backdrop-filter: blur(3.5px);
 	}
@@ -427,19 +441,24 @@ body.popup-open {
     }
 	.wrap-main {
 		justify-content: space-between;
-		.header {
-			position: absolute;
-			top: 0;left: 0;right: 0;
-		}
 	}
 	.popup-box {
 
 	}
 }
 @media (min-width: 1024px) {
+	.wrap {
+		&:has(.section-main-box.active) {
+		}
+	}
+	.wrap-inner {
+		padding-top: 110px;
+	}
 	.header {
 		background: var(--clr-base-white);
 		backdrop-filter: none;
+		position: fixed;
+		top: 0;left: 0;right: 0;
 		&:before {
 			border-top: none;
 			border-left: none;

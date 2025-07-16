@@ -7,6 +7,25 @@ window.addEventListener('load', function() {
 	}, 1000);
 
 
+	//header show on scroll
+	const wrap = document.querySelector('.wrap');
+	let lastScroll = wrap.scrollTop;
+
+	wrap.addEventListener('scroll', function() {
+		let currentScroll = wrap.scrollTop;
+
+		if (currentScroll > lastScroll) {
+			// Прокрутка вниз
+			wrap.classList.add('scroll-down');
+			wrap.classList.remove('scroll-up');
+		} else if (currentScroll < lastScroll) {
+			// Прокрутка вверх
+			wrap.classList.add('scroll-up');
+			wrap.classList.remove('scroll-down');
+		}
+		lastScroll = currentScroll;
+	});
+
 	//more section
 	let sectionMoreBoxes = document.querySelectorAll('.section-more-box');
 
@@ -128,6 +147,55 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//select toggle content visibility
+	const inputs = document.querySelectorAll(
+	  "input[data-content], input[data-content-check], input[data-content-uncheck]"
+	);
+  
+	inputs.forEach(function (input) {
+	  toggleContent(input);
+	  });
+  
+	inputs.forEach((input) => {
+	  input.addEventListener("click", function () {
+		document.querySelectorAll(".frm-content").forEach((content) => {
+		  content.classList.remove("active");
+			  });
+  
+		inputs.forEach(toggleContent);
+		  });
+	  });
+  
+	document.querySelectorAll(".btn[data-content]").forEach((button) => {
+	  button.addEventListener("click", function () {
+		let dataContent = this.getAttribute("data-content");
+		this.disabled = true;
+		document
+		  .querySelectorAll('.frm-content[data-content="' + dataContent + '"]')
+		  .forEach((content) => {
+			content.classList.add("active");
+			  });
+		return false;
+		  });
+	  });
+  
+	function toggleContent(input) {
+	  let selectContent;
+	  if (input.checked) {
+		selectContent =
+		  input.getAttribute("data-content-check") ||
+		  input.getAttribute("data-content");
+		  } else {
+		selectContent = input.getAttribute("data-content-uncheck");
+		  }
+	  document
+		.querySelectorAll('.frm-content[data-content="' + selectContent + '"]')
+		.forEach((content) => {
+		  content.classList.add("active");
+		  });
+	  }
+
+
 	//select style
 	document.querySelectorAll('select').forEach(function(select) {
 		new Choices(select);
@@ -136,10 +204,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	//button scroll 
 	document.querySelectorAll('.js-anchor').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
+			document.querySelector('.popup-menu-wrap .js-btn-popup-close').click();
 			document.querySelector(this.getAttribute('href')).scrollIntoView({
 				behavior: 'smooth'
 			});
+			e.preventDefault();
 		});
 	});
 
