@@ -1747,6 +1747,18 @@ body.popup-open {
   right: 0;
   overflow: hidden;
 }
+.main-slider-box .sl-bg-wrap:after,
+.inner-slider-box .sl-bg-wrap:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3);
+}
 .main-slider-box .inner-wrap,
 .inner-slider-box .inner-wrap,
 .main-slider-box .slider-inner-wrap,
@@ -4706,6 +4718,14 @@ body.popup-open {
   }
   .lead-info-box .title-inner-wrap {
     color: var(--clr-att);
+  }
+  .section-info-tiles .inner-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .section-tiles .inner-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .section-tiles .slider-wrap {
     overflow: visible;
