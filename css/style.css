@@ -4707,6 +4707,95 @@ body.popup-open {
   }
 }
 @media (min-width: 1024px) {
+  .section-main-box.line-left-right.active:before {
+    width: calc(var(--paddingContainer) + var(--paddingContainer) + (100dvw - var(--max))/2);
+  }
+  .section-main-box.line-left-right:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+    transition: all ease 2s;
+    transition-delay: 1s;
+  }
+  .section-main-box.line-right-left.active:before {
+    width: calc(var(--paddingContainer) + (100dvw - var(--max))/2);
+  }
+  .section-main-box.line-right-left:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    width: 0;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+    transition: all ease 2s;
+    transition-delay: 1s;
+  }
+  .section-main-box.line-center-top-bottom.active:before {
+    height: 100%;
+  }
+  .section-main-box.line-center-top-bottom:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 0;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+    transition: all ease 2s;
+    transition-delay: 1s;
+  }
+  .section-main-box.line-left-top-bottom.active:before {
+    height: 100%;
+  }
+  .section-main-box.line-left-top-bottom:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: var(--paddingContainer);
+    width: 1px;
+    height: 0;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+    transition: all ease 2s;
+    transition-delay: 1s;
+  }
+  .section-main-box.line-right-top-bottom.active:after {
+    height: 100%;
+  }
+  .section-main-box.line-right-top-bottom:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: var(--paddingContainer);
+    width: 1px;
+    height: 0;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+    transition: all ease 2s;
+    transition-delay: 1s;
+  }
+  .section-main-box.line-att:before,
+  .section-main-box.line-att:after {
+    background-color: var(--clr-att);
+  }
   .lead-info-box {
     width: 100%;
     -ms-flex-negative: 0;
