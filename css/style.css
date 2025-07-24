@@ -4753,7 +4753,7 @@ body.popup-open {
 }
 @media (min-width: 1024px) {
   .section-main-box.line-left-right.active:before {
-    width: calc(var(--paddingContainer) + var(--paddingContainer) + (100dvw - var(--max))/2);
+    width: calc(100px + var(--paddingContainer) + var(--paddingContainer) + (100dvw - var(--max))/2);
   }
   .section-main-box.line-left-right:before {
     content: "";
@@ -4770,7 +4770,7 @@ body.popup-open {
     transition-delay: 1s;
   }
   .section-main-box.line-right-left.active:before {
-    width: calc(var(--paddingContainer) + (100dvw - var(--max))/2);
+    width: calc(100px + var(--paddingContainer) + (100dvw - var(--max))/2);
   }
   .section-main-box.line-right-left:before {
     content: "";
