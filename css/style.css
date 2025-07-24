@@ -2462,6 +2462,12 @@ body.popup-open {
 .section-form .field-submit .btn {
   width: 100%;
 }
+.section-solution .slider-actions-wrap {
+  display: none;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+}
 .section-solution .inner-wrap {
   background: #f2f3f5;
   padding: 0;
@@ -2501,6 +2507,22 @@ body.popup-open {
 }
 .section-solution .total-panel-wrap .frm-content:not(.active) {
   display: none;
+}
+.section-solution .total-panel-wrap .slider-inner-wrap,
+.section-solution .total-panel-wrap .slider-wrap,
+.section-solution .total-panel-wrap .sl-wrap {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  background: none;
+}
+.section-solution .total-panel-wrap .slider-wrap {
+  margin: 0 -5px;
+}
+.section-solution .total-panel-wrap .sl-wrap {
+  padding: 0 5px;
 }
 .section-solution .title-inner-wrap {
   margin-bottom: 10px;
@@ -4116,6 +4138,24 @@ body.popup-open {
   .section-form .field-info {
     font-size: 16px;
   }
+  .section-solution.active .slider-actions-wrap {
+    opacity: 1;
+  }
+  .section-solution .slider-actions-wrap {
+    display: none;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: var(--paddingContainer);
+    left: auto;
+    z-index: 10;
+    width: 40rem;
+    padding-bottom: 5rem;
+    opacity: 0;
+    transition: all ease 0.2s;
+    transition-delay: 3s;
+  }
   .section-solution .inner-wrap {
     padding: 0;
   }
@@ -4131,7 +4171,7 @@ body.popup-open {
         flex-shrink: 0;
     -ms-flex-order: 2;
         order: 2;
-    padding: 6rem var(--paddingContainer) 6rem 6rem;
+    padding: 10rem var(--paddingContainer) 6rem 6rem;
     text-align: left;
     display: -ms-flexbox;
     display: flex;
@@ -4145,7 +4185,12 @@ body.popup-open {
   }
   .section-solution .total-panel-wrap {
     padding: 0;
+    position: static;
     margin-top: 14rem;
+  }
+  .section-solution .total-panel-wrap .slider-values.slider-inner-wrap {
+    overflow: visible;
+    position: static;
   }
   .section-solution .photos-inner-wrap {
     -ms-flex-order: 1;
