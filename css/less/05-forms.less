@@ -219,6 +219,38 @@ body {
 		}
 	}
 }
+@media (max-width: 767px) {
+	/* font adapt */
+	body .choices, body .choices .choices__list--dropdown {
+		font-size: (11/320*100vw);
+	}
+	body .choices .choices__list--dropdown .choices__item {
+		padding-top: (8/11em);
+		padding-bottom: (8/11em);
+	}
+	body .choices.choices[data-type*=select-one]:after {
+		width: (24/11em);
+		height: (24/11em);
+		margin-top: (-12/11em);
+		background-size: 1.1em auto;
+	}
+	body .choices .choices__inner {
+		min-height: (28/11em);
+		display: flex;
+		align-items: center;
+	}
+	body .choices.choices[data-type*=select-one] .choices__inner, body .choices .choices__inner {
+		padding: (4/11em) (30/11em) (4/11em) (8/11em);
+	}
+	.frm-select-button label {
+		font-size: (12/320*100vw);
+		height: (30/12em);
+		line-height: (28/12em);
+		min-width: (85/12em);
+		border-radius: 50px;
+	}
+	/* end font adapt */
+}
 @media (min-width: 1024px) {
 	body {
 		.choices {

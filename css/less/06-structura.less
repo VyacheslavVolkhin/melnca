@@ -446,6 +446,59 @@ body.popup-open {
 
 	}
 }
+@media (max-width: 767px) {
+	/* end font adapt */
+	.header {
+		.inner-wrap {
+			padding-top: 0.9em;
+			padding-bottom: 0.9em;
+			min-height: 5em;
+		}
+		.menu-inner-wrap {
+			width: 6.4em;
+		}
+		.logo-inner-wrap, .popup-logo-wrap {
+			width: 9.5em;
+		}
+		.popup-close-wrap {
+			width: 6em;
+		}
+		.popup-close-wrap .btn-popup-close {
+			font-size: 1em;
+			height: 3em;
+			&:before {
+				background-size: 2em;
+			}
+		}
+		.popup-menu-wrap .btn-popup {
+			font-size: 1em;
+			height: 3em;
+		}
+		.popup-links-wrap, 
+		.footer-info-panel {
+			font-size: (14/320*100vw);
+		}
+		.popup-menu-wrap .popup-action-wrap {
+			margin-top: 0.6em;
+		}
+		.popup-header-wrap {
+			min-height: 5em;
+		}
+		.footer-info-panel .button-soc {
+			font-size: 1em;
+			width: (30/14em);
+			height: (30/14em);
+			img, svg {
+				width: 100%;
+			}
+		}
+
+	}
+	.footer-info-panel {
+		font-size: (14/320*100vw);
+	}
+	/* font adapt */
+}
 @media (min-width: 1024px) {
 	.wrap {
 		&:has(.section-main-box.active) {

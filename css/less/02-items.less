@@ -384,6 +384,40 @@
 	font-weight: bold;
 	color: #fff;
 }
+@media (max-width: 767px) {
+	/* font adapt */
+	.item-tile-ico, .item-tile-info-ico, .item-tile-info, .item-tile-logo-info,
+	.item-tile-logo-info .tile-title-info {
+		font-size: (10/320*100vw);
+	}
+	.item-tile-info.tile-main, .item-tile-info.tile-doc .tile-info, .item-tile-article {
+		font-size: (12/320*100vw);
+	}
+	.item-tile-info.tile-main .tile-title,
+	.item-tile-logo-info .tile-title {
+		font-size: (18/320*100vw);
+	}
+	.item-tile-info.tile-doc {
+		padding: (22/12em);
+	}
+	.item-tile-info-ico {
+		padding: 1em (8/10em);
+	}
+	.item-tile-info.tile-main {
+		padding: 1.5em 2.2em;
+	}
+	.item-tile-logo-info {
+		padding: 1em;
+	}
+	.item-tile-info-ico .tile-ico,
+	.item-tile-logo-info .tile-ico,
+	.item-tile-ico .tile-ico {
+		width: (32/10em);
+		height: (32/10em);
+		font-size: 1em;
+	}
+	/* end font adapt */
+}
 @media (max-width: 639px) {
 	.section-tiles-grid {
 		.wrap-full {
